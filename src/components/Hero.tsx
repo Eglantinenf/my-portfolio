@@ -1,12 +1,14 @@
+"use client";
 import React from "react";
 import AnimatedBackground from "./AnimatedBackground";
+import useTypingEffect from "@/hooks/useTypingEffects";
 
 export type HeroTypes = {
   name: string;
-  tagline: string;
 };
 
-const Hero: React.FC<HeroTypes> = ({ name, tagline }) => {
+const Hero: React.FC<HeroTypes> = ({ name }) => {
+  const tagline = useTypingEffect("Frontend Developer | React.js | TypeScript");
   return (
     <section
       className="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-[#17092c] via-[#6919a2] to-[#5922d7]
