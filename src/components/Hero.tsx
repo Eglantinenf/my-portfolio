@@ -22,6 +22,15 @@ const Hero: React.FC<HeroTypes> = ({ name }) => {
  hero-overlay relative"
     >
       <AnimatedBackground />
+      <div className="relative group">
+        <img
+          src="/profile.jpg"
+          alt="Nastaran Farjami Portrait"
+          style={{ objectPosition: "center 30%" }}
+          className="w-36 h-36 lg:w-48 lg:h-48 rounded-full object-cover border-4 border-white shadow-lg group-hover:scale-105 group-hover:shadow-xl transition-transform duration-300"
+        />
+      </div>
+
       <h1 className="bg-gradient-to-r from-[#ef5cec] via-[#c074f7] to-[#dc82bc] text-transparent bg-clip-text font-extrabold text-5xl lg:text-7xl drop-shadow-lg">
         {name}
       </h1>
