@@ -31,7 +31,17 @@ const useTypingEffect = (texts: string[], typingSpeed = 100): string => {
     }, typingSpeed);
 
     return () => clearTimeout(timeoutId);
-  }, [currentText, isDeleting, currentIndex, texts, typingSpeed]);
+  }, [currentText, isDeleting, currentIndex, texts, typingSpeed, pause]);
+  useEffect(() => {
+    if (pause) {
+      const pauseTimeout = setTimeout(() => {
+        setPause(false);
+        setIsDeleting(true);
+      }, 1000);
+
+      return () => clearTimeout(pauseTimeout);
+    }
+  }, [pause]);
 
   return currentText;
 };
