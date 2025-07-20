@@ -1,10 +1,22 @@
 "use client";
+import { Orbitron, Russo_One } from "next/font/google";
 import React from "react";
 import AnimatedBackground from "./AnimatedBackground";
 import useTypingEffect from "@/hooks/useTypingEffects";
 import skills from "@/data/skills";
 import ScrollDownIndicator from "./ScrollDownIndicator";
 import Image from "next/image";
+import AnimatedTerminal from "./AnimatedTerminal";
+
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
+
+const russoOne = Russo_One({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export type HeroTypes = {
   name: string;
@@ -36,10 +48,14 @@ const Hero: React.FC<HeroTypes> = ({ name }) => {
           />
         </div>
         <div className="text-center lg:text-left">
-          <h1 className="bg-gradient-to-r from-[#ef5cec] via-[#c074f7] to-[#dc82bc] text-transparent bg-clip-text font-extrabold text-5xl lg:text-7xl drop-shadow-lg">
+          <h1
+            className={`${russoOne.className} bg-gradient-to-r from-[#ef5cec] via-[#c074f7] to-[#dc82bc] text-transparent bg-clip-text font-extrabold text-5xl lg:text-7xl drop-shadow-lg`}
+          >
             {name}
           </h1>
-          <p className="text-2xl lg:text-3xl font-semibold text-gray-100 mt-4 min-h-[2.5rem]">
+          <p
+            className={`${orbitron.className} text-2xl lg:text-3xl font-semibold text-gray-100 mt-4 min-h-[2.5rem]`}
+          >
             {tagline}
           </p>
         </div>
@@ -62,6 +78,7 @@ const Hero: React.FC<HeroTypes> = ({ name }) => {
       >
         Download Resume
       </button>
+      <AnimatedTerminal />
       <ScrollDownIndicator />
     </section>
   );

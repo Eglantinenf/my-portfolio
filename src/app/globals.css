@@ -16,3 +16,16 @@
   pointer-events: none;
   z-index: -1;
 }
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.blink-cursor {
+  animation: blink 1.2s step-start infinite;
+}
