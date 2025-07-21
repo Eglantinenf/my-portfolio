@@ -2,11 +2,11 @@
 import { Orbitron, Russo_One } from "next/font/google";
 import React from "react";
 import AnimatedBackground from "./AnimatedBackground";
+// import AnimatedTerminal from "./AnimatedTerminal";
 import useTypingEffect from "@/hooks/useTypingEffects";
 import skills from "@/data/skills";
 import ScrollDownIndicator from "./ScrollDownIndicator";
 import Image from "next/image";
-// import AnimatedTerminal from "./AnimatedTerminal";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -30,12 +30,9 @@ const Hero: React.FC<HeroTypes> = ({ name }) => {
     "Open Source Explorer",
   ]);
   return (
-    <section
-      className="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-[#17092c] via-[#6919a2] to-[#5922d7]
- hero-overlay relative"
-    >
+    <section className="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-[#17092c] via-[#6919a2] to-[#5922d7] hero-overlay relative px-4 md:px-6">
       <AnimatedBackground />
-      <div className="flex flex-col lg:flex-row items-center gap-8">
+      <div className="flex flex-col lg:flex-row items-center gap-6 md:gap-8 max-w-6xl w-full">
         <div className="relative group">
           <Image
             src="/download.jfif"
@@ -47,37 +44,42 @@ const Hero: React.FC<HeroTypes> = ({ name }) => {
             priority
           />
         </div>
-        <div className="text-center lg:text-left">
+        <div className="text-center lg:text-left flex-1">
           <h1
-            className={`${russoOne.className} bg-gradient-to-r from-[#ef5cec] via-[#c074f7] to-[#dc82bc] text-transparent bg-clip-text font-extrabold text-5xl lg:text-7xl drop-shadow-lg`}
+            className={`${russoOne.className} bg-gradient-to-r from-[#ef5cec] via-[#c074f7] to-[#dc82bc] text-transparent bg-clip-text font-extrabold drop-shadow-lg leading-tight
+              text-4xl md:text-5xl lg:text-7xl`}
           >
             {name}
           </h1>
           <p
-            className={`${orbitron.className} text-2xl lg:text-3xl font-semibold text-gray-100 mt-4 min-h-[2.5rem]`}
+            aria-live="polite"
+            className={`${orbitron.className} text-lg md:text-2xl lg:text-3xl font-semibold text-gray-100 mt-4 min-h-[2.5rem] drop-shadow-md`}
           >
             {tagline}
           </p>
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-4 mt-6 max-w-xl">
+      <div className="flex flex-wrap justify-center gap-4 mt-6 max-w-xl w-full px-2">
         {skills.map((skill) => (
-          <span
+          <button
             key={skill}
-            className="animate-float bg-pink-900 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm font-medium cursor-pointer transition hover:bg-pink-700"
-            title={skill}
+            type="button"
+            aria-label={`Skill: ${skill}`}
+            className="animate-float bg-pink-900 bg-opacity-80 text-white px-3 py-1 rounded-full text-sm font-medium cursor-pointer transition hover:bg-pink-700 drop-shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
           >
             {skill}
-          </span>
+          </button>
         ))}
       </div>
+
       <button
         aria-label="Download Resume"
-        className="mt-6 px-6 py-3 flex items-center gap-3 rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-purple-700 text-white font-bold shadow-lg hover:scale-105 hover:brightness-110 transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-pink-400"
+        className="mt-6 px-6 py-3 flex items-center gap-3 rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-purple-700 text-white font-bold text-base md:text-lg shadow-lg hover:scale-105 hover:brightness-110 transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-pink-400"
       >
         Download Resume
         <svg
+          aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
