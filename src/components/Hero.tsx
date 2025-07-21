@@ -6,7 +6,7 @@ import useTypingEffect from "@/hooks/useTypingEffects";
 import skills from "@/data/skills";
 import ScrollDownIndicator from "./ScrollDownIndicator";
 import Image from "next/image";
-import AnimatedTerminal from "./AnimatedTerminal";
+// import AnimatedTerminal from "./AnimatedTerminal";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -74,11 +74,25 @@ const Hero: React.FC<HeroTypes> = ({ name }) => {
       </div>
       <button
         aria-label="Download Resume"
-        className="mt-6 px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold rounded-full shadow-lg hover:scale-105 transform transition"
+        className="mt-6 px-6 py-3 flex items-center gap-3 rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-purple-700 text-white font-bold shadow-lg hover:scale-105 hover:brightness-110 transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-pink-400"
       >
         Download Resume
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={2}
+          stroke="currentColor"
+          className="w-5 h-5"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"
+          />
+        </svg>
       </button>
-      <AnimatedTerminal />
+      {/* <AnimatedTerminal /> */}
       <ScrollDownIndicator />
     </section>
   );
