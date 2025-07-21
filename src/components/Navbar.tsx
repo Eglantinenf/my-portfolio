@@ -32,11 +32,11 @@ const Navbar: React.FC = () => {
       <div className="flex justify-between items-center px-4 md:px-10 py-4">
         <div>
           <Image
-            src="/logo.png"
+            src="/1.png"
             alt="Logo"
             width={60}
             height={60}
-            className="object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
+            className="rounded-full object-cover border-2 border-white cursor-pointer hover:scale-105 transition-transform duration-300"
             priority
           />
         </div>

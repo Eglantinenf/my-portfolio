@@ -35,7 +35,7 @@ const Hero: React.FC<HeroTypes> = ({ name }) => {
       <div className="flex flex-col lg:flex-row items-center gap-6 md:gap-8 max-w-6xl w-full">
         <div className="relative group">
           <Image
-            src="/download.jfif"
+            src="/2.png"
             alt="Nastaran Farjami Portrait"
             width={192}
             height={192}
