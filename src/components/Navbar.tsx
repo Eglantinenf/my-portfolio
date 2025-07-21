@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Sun, Moon } from "lucide-react";
 import Image from "next/image";
 
 type NavLink = {
@@ -16,16 +17,26 @@ const links: NavLink[] = [
 ];
 
 const Navbar: React.FC = () => {
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
   return (
     <nav className="sticky top-0 z-50 w-full backdrop-blur-md bg-transparent ">
       <div className="flex justify-between items-center px-4 md:px-10 py-4">
         <div>
           <Image
             src="/logo.png"
-            alt="Eglantinenf Logo"
+            alt="Logo"
             width={60}
             height={60}
-            className="rounded-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
+            className="object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
             priority
           />
         </div>
@@ -45,6 +56,21 @@ const Navbar: React.FC = () => {
               </a>
             </li>
           ))}
+
+          <li>
+            <button
+              onClick={() => setDarkMode((prev) => !prev)}
+              aria-label="Toggle Dark Mode"
+              className="p-2 rounded hover:bg-purple-700 transition"
+              type="button"
+            >
+              {darkMode ? (
+                <Sun className="w-5 h-5 text-yellow-300" />
+              ) : (
+                <Moon className="w-5 h-5 text-gray-300" />
+              )}
+            </button>
+          </li>
         </ul>
       </div>
     </nav>
