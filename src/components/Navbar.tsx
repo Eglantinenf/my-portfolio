@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
 import Image from "next/image";
 import { useTheme } from "@/context/ThemeContext";
@@ -18,11 +18,28 @@ const links: NavLink[] = [
 ];
 
 const Navbar: React.FC = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("");
   const { darkMode, setDarkMode } = useTheme();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  console.log(scrolled);
+
   return (
-    <nav className="sticky top-0 z-50 w-full backdrop-blur-md bg-transparent ">
-      <div className="flex justify-between items-center px-4 md:px-10 py-4">
+    <nav
+      className={`sticky top-0 z-50 w-full backdrop-blur-md bg-transparent ${
+        scrolled
+          ? "bg-white/80 dark:bg-[#0d1117]/80 shadow-md"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="flex justify-between items-center px-4 md:px-10 py-2">
         <div>
           <Image
             src={darkMode ? "/1.png" : "/2.png"}

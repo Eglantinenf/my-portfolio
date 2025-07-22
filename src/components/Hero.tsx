@@ -25,7 +25,6 @@ export type HeroTypes = {
 
 const Hero: React.FC<HeroTypes> = ({ name }) => {
   const { darkMode } = useTheme();
-  console.log("Current theme:", darkMode);
   const tagline = useTypingEffect([
     "Frontend Developer",
     "React.js Enthusiast",
