@@ -38,12 +38,11 @@ const Hero: React.FC<HeroTypes> = ({ name }) => {
       <div className="flex flex-col lg:flex-row items-center gap-6 md:gap-8 max-w-6xl w-full">
         <div className="relative group">
           <Image
-            key={darkMode ? "dark-img" : "light-img"}
             src={darkMode ? "/1.png" : "/2.png"}
             alt="Nastaran Farjami Portrait"
             width={192}
             height={192}
-            className="w-36 h-36 lg:w-48 lg:h-48 rounded-full object-cover border-4 border-white shadow-lg group-hover:scale-105 group-hover:shadow-xl transition-transform duration-300"
+            className="w-36 h-36 lg:w-48 lg:h-48 rounded-full object-cover shadow-lg group-hover:scale-105 group-hover:shadow-xl transition-transform duration-300"
             style={{ objectPosition: "center 30%" }}
             priority
           />

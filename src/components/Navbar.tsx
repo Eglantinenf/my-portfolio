@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Sun, Moon } from "lucide-react";
 import Image from "next/image";
+import { useTheme } from "@/context/ThemeContext";
 
 type NavLink = {
   label: string;
@@ -17,26 +18,18 @@ const links: NavLink[] = [
 ];
 
 const Navbar: React.FC = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [darkMode]);
+  const { darkMode, setDarkMode } = useTheme();
 
   return (
     <nav className="sticky top-0 z-50 w-full backdrop-blur-md bg-transparent ">
       <div className="flex justify-between items-center px-4 md:px-10 py-4">
         <div>
           <Image
-            src="/1.png"
+            src={darkMode ? "/1.png" : "/2.png"}
             alt="Logo"
             width={60}
             height={60}
-            className="rounded-full object-cover border-2 border-white cursor-pointer hover:scale-105 transition-transform duration-300"
+            className="rounded-full object-cover border-3 border-gray-200 dark:border-gray-700 shadow-xl cursor-pointer hover:scale-105 transition-transform duration-300"
             priority
           />
         </div>
@@ -59,7 +52,7 @@ const Navbar: React.FC = () => {
 
           <li>
             <button
-              onClick={() => setDarkMode((prev) => !prev)}
+              onClick={() => setDarkMode(!darkMode)}
               aria-label="Toggle Dark Mode"
               className="p-2 rounded hover:bg-purple-700 transition"
               type="button"
