@@ -30,3 +30,11 @@
 .animate-fade-in {
   animation: fade-in 1s ease-out forwards;
 }
+
+body {
+  @apply bg-gradient-to-r from-pink-100 via-purple-200 to-indigo-100 text-gray-800 transition-colors duration-500;
+}
+
+.dark body {
+  @apply bg-gradient-to-r from-[#17092c] via-[#6919a2] to-[#5922d7] text-gray-100 transition-colors duration-500;
+}

@@ -7,6 +7,7 @@ import useTypingEffect from "@/hooks/useTypingEffects";
 import skills from "@/data/skills";
 import ScrollDownIndicator from "./ScrollDownIndicator";
 import Image from "next/image";
+import { useTheme } from "@/context/ThemeContext";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -23,6 +24,8 @@ export type HeroTypes = {
 };
 
 const Hero: React.FC<HeroTypes> = ({ name }) => {
+  const { darkMode } = useTheme();
+  console.log("Current theme:", darkMode);
   const tagline = useTypingEffect([
     "Frontend Developer",
     "React.js Enthusiast",
@@ -35,7 +38,8 @@ const Hero: React.FC<HeroTypes> = ({ name }) => {
       <div className="flex flex-col lg:flex-row items-center gap-6 md:gap-8 max-w-6xl w-full">
         <div className="relative group">
           <Image
-            src="/2.png"
+            key={darkMode ? "dark-img" : "light-img"}
+            src={darkMode ? "/1.png" : "/2.png"}
             alt="Nastaran Farjami Portrait"
             width={192}
             height={192}
@@ -46,14 +50,18 @@ const Hero: React.FC<HeroTypes> = ({ name }) => {
         </div>
         <div className="text-center lg:text-left flex-1">
           <h1
-            className={`${russoOne.className} bg-gradient-to-r from-[#ef5cec] via-[#c074f7] to-[#dc82bc] text-transparent bg-clip-text font-extrabold drop-shadow-lg leading-tight
-              text-4xl md:text-5xl lg:text-7xl`}
+            className={`${russoOne.className} 
+    font-extrabold drop-shadow-lg leading-tight 
+    text-4xl md:text-5xl lg:text-7xl
+    text-transparent bg-clip-text transition-colors duration-500
+    bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500
+    dark:from-[#ef5cec] dark:via-[#c074f7] dark:to-[#dc82bc]`}
           >
             {name}
           </h1>
           <p
             aria-live="polite"
-            className={`${orbitron.className} text-lg md:text-2xl lg:text-3xl font-semibold text-gray-100 mt-4 min-h-[2.5rem] drop-shadow-md`}
+            className={`${orbitron.className} text-lg md:text-2xl lg:text-3xl font-semibold mt-4 min-h-[2.5rem] drop-shadow-md`}
           >
             {tagline}
           </p>

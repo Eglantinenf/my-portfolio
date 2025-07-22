@@ -7,38 +7,18 @@ const AnimatedTerminal: React.FC = () => {
     <div className="hidden custom:block fixed right-10 top-[40%] -translate-y-1/2 w-96 h-60 bg-[#0d1117]/80 backdrop-blur-sm border border-purple-400/30 rounded-xl p-4 font-mono text-sm text-pink-400 shadow-[0_0_15px_#43054f] animate-fade-in overflow-hidden pointer-events-none select-none">
       <div className="h-full w-full overflow-hidden whitespace-pre-wrap leading-relaxed tracking-wide">
         <Typewriter
-          onInit={(typewriter) => {
-            const lines = [
+          options={{
+            strings: [
               "git clone https://github.com/Eglantinenf/my-portfolio",
               "cd my-portfolio",
               "npm install",
               "npm run dev",
-              "Server running at http://localhost:3000",
-            ];
-
-            function runTyping() {
-              typewriter
-                .pauseFor(500)
-                .deleteAll()
-                .callFunction(() => {})
-                .start();
-
-              lines.forEach((line) => {
-                typewriter
-                  .typeString(line)
-                  .pauseFor(1500)
-                  .deleteAll()
-                  .pauseFor(300);
-              });
-
-              typewriter
-                .callFunction(() => {
-                  runTyping();
-                })
-                .start();
-            }
-
-            runTyping();
+              "🚀 Server running at http://localhost:3000",
+            ],
+            autoStart: true,
+            loop: true,
+            delay: 50,
+            deleteSpeed: 40,
           }}
         />
       </div>
