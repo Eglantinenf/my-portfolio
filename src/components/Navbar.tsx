@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
           />
         </div>
 
-        <ul className="hidden md:flex gap-8 font-medium text-white items-center">
+        <ul className="hidden md:flex gap-8 font-medium text-gray-800 dark:text-white items-center">
           {links.map(({ label, href }) => (
             <li key={label}>
               <a

@@ -42,7 +42,7 @@ const Hero: React.FC<HeroTypes> = ({ name }) => {
             alt="Nastaran Farjami Portrait"
             width={192}
             height={192}
-            className="w-36 h-36 lg:w-48 lg:h-48 rounded-full object-cover shadow-lg group-hover:scale-105 group-hover:shadow-xl transition-transform duration-300"
+            className="w-36 h-36 lg:w-48 lg:h-48 rounded-full object-cover group-hover:scale-105 dark:shadow-[0_0_10px_#43054f] group-hover:dark:shadow-[0_0_15px_#43054f] shadow-[0_0_10px_#a81d8d] group-hover:shadow-[0_0_15px_#a81d8d] transition-transform duration-300"
             style={{ objectPosition: "center 30%" }}
             priority
           />
