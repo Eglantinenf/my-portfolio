@@ -1,33 +1,47 @@
 "use client";
-import React, { useEffect, useState } from "react";
-
-const lines = [
-  "> npm install my-awesome-library",
-  "> git clone https://github.com/Eglantinenf/my-portfolio",
-  "> yarn start",
-  "> Live demo: http://myportfolio.com",
-];
+import React from "react";
+import Typewriter from "typewriter-effect";
 
 const AnimatedTerminal: React.FC = () => {
-  const [visibleLines, setVisibleLines] = useState<string[]>([]);
-
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      setVisibleLines((prev) => [...prev, lines[index]]);
-      index++;
-      if (index === lines.length) clearInterval(interval);
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
   return (
-    <div className="absolute left-4 top-1 w-72 h-48 bg-black bg-opacity-30 backdrop-blur-sm rounded-lg p-4 font-mono text-sm text-green-400 overflow-auto select-none pointer-events-none">
-      <pre>
-        {visibleLines.map((line, index) => (
-          <div key={index}>{line}</div>
-        ))}
-      </pre>
-      <span className="blink-cursor">|</span>
+    <div className="hidden custom:block fixed right-10 top-[40%] -translate-y-1/2 w-96 h-60 bg-[#0d1117]/80 backdrop-blur-sm border border-purple-400/30 rounded-xl p-4 font-mono text-sm text-pink-400 shadow-[0_0_15px_#43054f] animate-fade-in overflow-hidden pointer-events-none select-none">
+      <div className="h-full w-full overflow-hidden whitespace-pre-wrap leading-relaxed tracking-wide">
+        <Typewriter
+          onInit={(typewriter) => {
+            const lines = [
+              "git clone https://github.com/Eglantinenf/my-portfolio",
+              "cd my-portfolio",
+              "npm install",
+              "npm run dev",
+              "Server running at http://localhost:3000",
+            ];
+
+            function runTyping() {
+              typewriter
+                .pauseFor(500)
+                .deleteAll()
+                .callFunction(() => {})
+                .start();
+
+              lines.forEach((line) => {
+                typewriter
+                  .typeString(line)
+                  .pauseFor(1500)
+                  .deleteAll()
+                  .pauseFor(300);
+              });
+
+              typewriter
+                .callFunction(() => {
+                  runTyping();
+                })
+                .start();
+            }
+
+            runTyping();
+          }}
+        />
+      </div>
     </div>
   );
 };

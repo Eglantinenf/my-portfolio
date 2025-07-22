@@ -2,7 +2,7 @@
 import { Orbitron, Russo_One } from "next/font/google";
 import React from "react";
 import AnimatedBackground from "./AnimatedBackground";
-// import AnimatedTerminal from "./AnimatedTerminal";
+import AnimatedTerminal from "./AnimatedTerminal";
 import useTypingEffect from "@/hooks/useTypingEffects";
 import skills from "@/data/skills";
 import ScrollDownIndicator from "./ScrollDownIndicator";
@@ -94,7 +94,7 @@ const Hero: React.FC<HeroTypes> = ({ name }) => {
           />
         </svg>
       </button>
-      {/* <AnimatedTerminal /> */}
+      <AnimatedTerminal />
       <ScrollDownIndicator />
     </section>
   );
