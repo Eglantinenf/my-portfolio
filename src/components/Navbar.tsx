@@ -4,6 +4,13 @@ import React, { useEffect, useState, useRef } from "react";
 import { Sun, Moon } from "lucide-react";
 import Image from "next/image";
 import { useTheme } from "@/context/ThemeContext";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuSeparator,
+} from "./ui/dropdown-menu";
 
 type NavLink = {
   label: string;
@@ -128,58 +135,65 @@ const Navbar: React.FC = () => {
             </button>
           </li>
         </ul>
+        {/* Mobile Hamburger using shadcnUi */}
+        <div className="md:hidden">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button
+                aria-label="Toggle Menu"
+                className="p-2 rounded hover:bg-purple-700/20 transition"
+              >
+                <svg
+                  className="w-6 h-6 text-white dark:text-gray-300"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            </DropdownMenuTrigger>
 
-        {/* Mobile Menu Toggle */}
-        <div className="md:hidden relative">
-          <button
-            aria-label="Toggle Menu"
-            aria-expanded={menuOpen}
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="p-2 rounded hover:bg-purple-700/20 transition"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="w-6 h-6 text-gray-900 dark:text-gray-300"
-            >
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <line x1="3" y1="12" x2="21" y2="12" />
-              <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
-          </button>
-
-          {menuOpen && (
-            <div
-              ref={menuRef}
-              className="absolute rounded-2xl top-[70px] right-3 w-48 bg-white dark:bg-[#0d1117] shadow-md px-6 py-6 flex flex-col space-y-4 text-gray-900 dark:text-white text-lg z-40 animate-slideDown"
+            <DropdownMenuContent
+              align="end"
+              className="w-56 bg-white dark:bg-[#1a0b2e] shadow-xl rounded-lg border border-purple-800/30"
             >
               {links.map(({ label, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  onClick={() => setMenuOpen(false)}
-                  className="hover:text-purple-500 transition font-medium"
-                >
-                  {label}
-                </a>
+                <DropdownMenuItem key={label} asChild>
+                  <a
+                    href={href}
+                    className="w-full text-left text-sm hover:text-purple-600 transition-colors"
+                  >
+                    {label}
+                  </a>
+                </DropdownMenuItem>
               ))}
-              <button
-                onClick={() => {
-                  setDarkMode(!darkMode);
-                  setMenuOpen(false);
-                }}
-                aria-label="Toggle Dark Mode"
-                className="mt-4 p-2 rounded bg-purple-600 text-white font-semibold hover:bg-purple-700 transition"
-              >
-                {darkMode ? "Light Mode" : "Dark Mode"}
-              </button>
-            </div>
-          )}
+
+              <DropdownMenuSeparator />
+
+              <DropdownMenuItem asChild>
+                <button
+                  onClick={() => setDarkMode(!darkMode)}
+                  className="flex items-center gap-2 w-full"
+                >
+                  {darkMode ? (
+                    <>
+                      <Sun className="w-4 h-4 text-yellow-300" /> Light Mode
+                    </>
+                  ) : (
+                    <>
+                      <Moon className="w-4 h-4 text-gray-300" /> Dark Mode
+                    </>
+                  )}
+                </button>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
     </nav>

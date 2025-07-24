@@ -1,0 +1,16 @@
+{
+  "hero.name": "نسترن فرجامی",
+  "hero.taglines": [
+    "توسعه‌دهنده فرانت‌اند",
+    "علاقه‌مند به React.js",
+    "عاشق تایپ‌اسکریپت",
+    "کاوشگر منبع‌باز"
+  ],
+  "hero.resume": "دانلود رزومه",
+  "navbar.about": "درباره من",
+  "navbar.projects": "پروژه‌ها",
+  "navbar.blog": "بلاگ",
+  "navbar.contact": "تماس با من",
+  "navbar.light": "حالت روشن",
+  "navbar.dark": "حالت تاریک"
+}
