@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "tagline": [
+      "Frontend Developer",
+      "React.js Enthusiast",
+      "TypeScript Lover",
+      "Open Source Explorer"
+    ],
+    "downloadResume": "Download Resume"
+  },
+  "navbar": {
+    "about": "About Me",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact Me",
+    "lightMode": "Light Mode",
+    "darkMode": "Dark Mode"
+  }
+}
