@@ -4,6 +4,9 @@ import React, { useEffect, useState, useRef } from "react";
 import { Sun, Moon } from "lucide-react";
 import Image from "next/image";
 import { useTheme } from "@/context/ThemeContext";
+import { useTransform } from "framer-motion";
+import LanguageSwitcher from "./LanguageSwitcher";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,11 +20,13 @@ type NavLink = {
   href: string;
 };
 
+const { t } = useTranslation();
+
 const links: NavLink[] = [
-  { label: "About Me", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Blog", href: "#blog" },
-  { label: "Contact Me", href: "#contact" },
+  { label: t("navbar.about"), href: "#about" },
+  { label: t("navbar.projects"), href: "#projects" },
+  { label: t("navbar.blog"), href: "#blog" },
+  { label: t("navbar.contact"), href: "#contact" },
 ];
 
 const Navbar: React.FC = () => {

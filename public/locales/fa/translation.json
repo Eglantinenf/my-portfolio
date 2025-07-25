@@ -6,7 +6,9 @@
       "عاشق TypeScript",
       "کاوشگر متن‌باز"
     ],
-    "downloadResume": "دانلود رزومه"
+    "downloadResume": "دانلود رزومه",
+    "imageAlt": "تصویر پرتره نسترن فرجامی",
+    "skillAria": "مهارت: {{skill}}"
   },
   "navbar": {
     "about": "درباره من",

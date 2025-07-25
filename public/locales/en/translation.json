@@ -6,7 +6,9 @@
       "TypeScript Lover",
       "Open Source Explorer"
     ],
-    "downloadResume": "Download Resume"
+    "downloadResume": "Download Resume",
+    "imageAlt": "Nastaran Farjami Portrait",
+    "skillAria": "Skill: {{skill}}"
   },
   "navbar": {
     "about": "About Me",
