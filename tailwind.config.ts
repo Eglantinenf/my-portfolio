@@ -23,7 +23,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [rtl], // ✅ DO NOT call it like rtl()
+  plugins: [rtl],
 };
 
 export default config;
