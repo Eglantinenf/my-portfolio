@@ -4,8 +4,8 @@ import React, { useEffect, useState, useRef } from "react";
 import { Sun, Moon } from "lucide-react";
 import Image from "next/image";
 import { useTheme } from "@/context/ThemeContext";
-import { useTranslation } from "react-i18next";
-import LanguageSwitcher from "./LanguageSwitcher";
+// import { useTranslation } from "react-i18next";
+// import LanguageSwitcher from "./LanguageSwitcher";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -19,20 +19,19 @@ type NavLink = {
   href: string;
 };
 
+const links: NavLink[] = [
+  { label: "About Me", href: "#about" },
+  { label: "Projects", href: "#projects" },
+  { label: "Blog", href: "#blog" },
+  { label: "Contact Me", href: "#contact" },
+];
+
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
   const { darkMode, setDarkMode } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  const { t } = useTranslation();
-
-  const links: NavLink[] = [
-    { label: t("navbar.about"), href: "#about" },
-    { label: t("navbar.projects"), href: "#projects" },
-    { label: t("navbar.blog"), href: "#blog" },
-    { label: t("navbar.contact"), href: "#contact" },
-  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -121,17 +120,15 @@ const Navbar: React.FC = () => {
               </a>
             </li>
           ))}
-          <li>
+          {/* <li>
             <LanguageSwitcher />
-          </li>
+          </li> */}
 
           {/* Dark Mode Toggle */}
           <li>
             <button
               onClick={() => setDarkMode(!darkMode)}
-              aria-label={
-                darkMode ? t("navbar.lightMode") : t("navbar.darkMode")
-              }
+              aria-label="Toggle Dark Mode"
               className="p-2 rounded hover:bg-purple-700 transition"
               type="button"
             >
@@ -184,12 +181,6 @@ const Navbar: React.FC = () => {
 
               <DropdownMenuSeparator />
 
-              <DropdownMenuItem>
-                <LanguageSwitcher />
-              </DropdownMenuItem>
-
-              <DropdownMenuSeparator />
-
               <DropdownMenuItem asChild>
                 <button
                   onClick={() => setDarkMode(!darkMode)}
@@ -197,13 +188,11 @@ const Navbar: React.FC = () => {
                 >
                   {darkMode ? (
                     <>
-                      <Sun className="w-4 h-4 text-yellow-300" />{" "}
-                      {t("navbar.lightMode")}
+                      <Sun className="w-4 h-4 text-yellow-300" /> Light Mode
                     </>
                   ) : (
                     <>
-                      <Moon className="w-4 h-4 text-gray-300" />{" "}
-                      {t("navbar.darkMode")}
+                      <Moon className="w-4 h-4 text-gray-300" /> Dark Mode
                     </>
                   )}
                 </button>

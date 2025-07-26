@@ -9,7 +9,7 @@ import skills from "@/data/skills";
 import ScrollDownIndicator from "./ScrollDownIndicator";
 import Image from "next/image";
 import { useTheme } from "@/context/ThemeContext";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -27,11 +27,14 @@ export type HeroTypes = {
 
 const Hero: React.FC<HeroTypes> = ({ name }) => {
   const { darkMode } = useTheme();
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
-  const tagline = useTypingEffect(
-    t("hero.tagline", { returnObjects: true }) as string[]
-  );
+  const tagline = useTypingEffect([
+    "Frontend Developer",
+    "React.js Enthusiast",
+    "TypeScript Lover",
+    "Open Source Explorer",
+  ]);
 
   return (
     <section className="h-screen flex flex-col justify-center items-center hero-overlay relative px-4 md:px-6">
@@ -40,7 +43,7 @@ const Hero: React.FC<HeroTypes> = ({ name }) => {
         <div className="relative group">
           <Image
             src={darkMode ? "/1.png" : "/2.png"}
-            alt={t("hero.imageAlt")}
+            alt="Nastaran Farjami Portrait"
             width={192}
             height={192}
             className="w-36 h-36 lg:w-48 lg:h-48 rounded-full object-cover group-hover:scale-105 dark:shadow-[0_0_10px_#43054f] group-hover:dark:shadow-[0_0_15px_#43054f] shadow-[0_0_10px_#a81d8d] group-hover:shadow-[0_0_15px_#a81d8d] transition-transform duration-300"
@@ -74,7 +77,7 @@ const Hero: React.FC<HeroTypes> = ({ name }) => {
           <button
             key={skill}
             type="button"
-            aria-label={t("hero.skillAria", { skill })}
+            // aria-label={t("hero.skillAria", { skill })}
             className="animate-float bg-pink-900 bg-opacity-80 text-white px-3 py-1 rounded-full text-sm font-medium cursor-pointer transition hover:bg-pink-700 drop-shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
           >
             {skill}
@@ -83,10 +86,10 @@ const Hero: React.FC<HeroTypes> = ({ name }) => {
       </div>
 
       <button
-        aria-label={t("hero.downloadResume")}
+        aria-label="Download Resume"
         className="mt-6 px-6 py-3 flex items-center gap-3 rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-purple-700 text-white font-bold text-base md:text-lg shadow-lg hover:scale-105 hover:brightness-110 transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-pink-400"
       >
-        {t("hero.downloadResume")}
+        Download Resume
         <svg
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"

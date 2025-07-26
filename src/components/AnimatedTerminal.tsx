@@ -26,16 +26,16 @@ const AnimatedTerminal: React.FC = () => {
         <Typewriter
           options={{
             strings: [
-              "git clone https://github.com/Eglantinenf/my-portfolio",
-              "cd my-portfolio",
-              "npm install",
-              "npm run dev",
-              "Server running at http://localhost:3000",
+              "Welcome to my portfolio 👋",
+              "I’m Nastaran Farjami, a passionate front-end developer 💻",
+              "Currently learning React, TypeScript & WebSocket 🚀",
+              "Explore my projects on GitHub 🔍",
+              "Let’s build something amazing together :)",
             ],
             autoStart: true,
             loop: true,
-            delay: 50,
-            deleteSpeed: 40,
+            delay: 30,
+            deleteSpeed: 20,
           }}
         />
       </div>

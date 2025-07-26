@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import rtl from "tailwindcss-rtl";
+// import rtl from "tailwindcss-rtl";
 
 const config: Config = {
   darkMode: "class",
@@ -23,7 +23,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [rtl],
+  plugins: [],
 };
 
 export default config;
