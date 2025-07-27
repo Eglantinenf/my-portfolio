@@ -9,7 +9,6 @@ import skills from "@/data/skills";
 import ScrollDownIndicator from "./ScrollDownIndicator";
 import Image from "next/image";
 import { useTheme } from "@/context/ThemeContext";
-// import { useTranslation } from "react-i18next";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
