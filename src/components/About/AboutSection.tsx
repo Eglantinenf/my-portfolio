@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import TimeLine from "./TimeLine";
 
 const AboutSection = () => {
   return (
@@ -12,6 +13,7 @@ const AboutSection = () => {
         <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
           just a text for now . . .
         </p>
+        <TimeLine />
       </div>
     </section>
   );
