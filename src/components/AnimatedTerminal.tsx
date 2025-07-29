@@ -6,7 +6,7 @@ const AnimatedTerminal: React.FC = () => {
   return (
     <div
       className="
-    hidden custom:block fixed right-10 top-[40%] -translate-y-1/2
+    hidden custom:block absolute right-10 top-[30%] -translate-y-1/2
     w-96 h-60
     bg-gray-100/60     
     dark:bg-[#0d1117]/80 

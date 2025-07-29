@@ -105,7 +105,6 @@ const Hero: React.FC<HeroTypes> = ({ name }) => {
           />
         </svg>
       </button>
-
       <AnimatedTerminal />
       <ScrollDownIndicator />
     </section>
