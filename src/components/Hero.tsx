@@ -76,7 +76,7 @@ const Hero: React.FC<HeroTypes> = ({ name }) => {
           <button
             key={skill}
             type="button"
-            // aria-label={t("hero.skillAria", { skill })}
+            aria-label="skills"
             className="animate-float bg-pink-900 bg-opacity-80 text-white px-3 py-1 rounded-full text-sm font-medium cursor-pointer transition hover:bg-pink-700 drop-shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
           >
             {skill}

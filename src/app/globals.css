@@ -43,3 +43,16 @@ body {
 .dark body {
   @apply bg-gradient-to-r from-[#17092c] via-[#6919a2] to-[#5922d7] text-gray-100 transition-colors duration-500;
 }
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
