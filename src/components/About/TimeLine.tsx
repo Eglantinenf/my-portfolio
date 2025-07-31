@@ -1,9 +1,15 @@
 import TimeLineItem from "./TimeLineItem";
 import { timelineData } from "./aboutData";
+import { Playfair_Display } from "next/font/google";
 
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+});
 const TimeLine: React.FC = () => {
   return (
-    <div className="relative mt-14 ml-6">
+    <div className={`${playfair.className} relative mt-14 ml-6`}>
       {timelineData.map((item, index) => (
         <TimeLineItem
           key={item.id}
