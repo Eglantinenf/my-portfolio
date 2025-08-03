@@ -1,5 +1,6 @@
 "use client";
-import { motion } from "framer-motion";
+import { useMotionValue, useTransform, motion } from "framer-motion";
+import { useRef } from "react";
 import type { Project } from "./ProjectsData";
 import { Github, ExternalLink } from "lucide-react";
 
