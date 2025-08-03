@@ -1,6 +1,5 @@
 "use client";
-import { useMotionValue, useTransform, motion } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import type { Project } from "./ProjectsData";
 import { Github, ExternalLink } from "lucide-react";
 
@@ -13,6 +12,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
   return (
     <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
       whileHover={{
         scale: 1.05,
         y: -5,
@@ -33,19 +35,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         {technologies.map((tech) => (
           <span
             key={tech}
-            className="bg-purple-100 dark:bg-purple-800/20 text-purple-700 dark:text-purple-300 px-3 py-1 rounded-full text-xs font-medium"
+            className="bg-purple-100 dark:bg-purple-800/20 text-purple-700 dark:text-purple-300 px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:scale-105 transition-transform"
           >
             {tech}
           </span>
         ))}
       </div>
 
-      <div className="flex items-center gap-4 mt-auto">
+      <div className="flex items-center gap-3 mt-6">
         <a
           href={github}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 text-sm text-white bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-lg transition-colors"
+          className="flex items-center gap-2 text-sm text-purple-50 bg-purple-700 hover:bg-purple-800 px-3 py-1.5 rounded-md shadow-sm transition-colors"
         >
           <Github size={16} />
           GitHub
@@ -55,7 +57,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           href={liveDemo}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 text-sm text-purple-600 dark:text-purple-300 border border-purple-500 px-4 py-2 rounded-lg hover:bg-purple-100/30 transition-colors"
+          className="flex items-center gap-2 text-sm text-purple-700 dark:text-purple-300 border border-purple-400 px-3 py-1.5 rounded-md hover:bg-purple-200/20 transition-colors"
         >
           <ExternalLink size={16} />
           Live Demo
