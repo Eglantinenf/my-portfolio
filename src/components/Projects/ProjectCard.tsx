@@ -21,17 +21,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         boxShadow: "0 10px 20px rgba(0,0,0,0.15)",
       }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className="rounded-2xl shadow-xl p-6 bg-gradient-to-br from-white to-gray-100 dark:from-[#1f1235] dark:to-[#120c23] "
+      className="rounded-3xl shadow-xl p-6 bg-gradient-to-br from-white/80 to-gray-100/90 backdrop-blur-md dark:from-[#1f1235]/90 dark:to-[#2a1742]/80 border border-white/10 dark:border-white/5"
     >
       <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
         {title}
       </h3>
 
-      <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+      <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mt-3">
         {description}
       </p>
 
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 mt-4">
         {technologies.map((tech) => (
           <span
             key={tech}
