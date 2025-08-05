@@ -36,7 +36,10 @@ const Hero: React.FC<HeroTypes> = ({ name }) => {
   ]);
 
   return (
-    <section className="h-screen flex flex-col justify-center items-center section-bg relative px-4 md:px-6">
+    <section
+      id="hero"
+      className="h-screen flex flex-col justify-center items-center section-bg relative px-4 md:px-6"
+    >
       <AnimatedBackground />
       <div className="flex flex-col lg:flex-row items-center gap-6 md:gap-8 max-w-6xl w-full">
         <div className="relative group">
