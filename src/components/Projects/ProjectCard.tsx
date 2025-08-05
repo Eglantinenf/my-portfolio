@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import type { Project } from "./ProjectsData";
 import { Github, ExternalLink } from "lucide-react";
 
@@ -8,7 +9,7 @@ type ProjectCardProps = {
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  const { title, description, technologies, github, liveDemo } = project;
+  const { title, description, technologies, github, liveDemo, image } = project;
 
   return (
     <motion.div
@@ -25,6 +26,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       aria-label={`Project: ${title}`}
       className="rounded-3xl shadow-xl p-6 bg-gradient-to-br from-white/80 to-gray-100/90 backdrop-blur-md dark:from-[#1f1235]/90 dark:to-[#2a1742]/80 border border-white/10 dark:border-white/5"
     >
+      <div className="mb-4 rounded-xl overflow-hidden">
+        <Image
+          src={image}
+          alt={`${title} screenshot`}
+          width={600}
+          height={400}
+          className="w-full h-auto object-cover rounded-xl"
+          priority={false}
+        />
+      </div>
       <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
         {title}
       </h3>

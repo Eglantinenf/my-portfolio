@@ -4,6 +4,7 @@ export type Project = {
   technologies: string[];
   github: string;
   liveDemo: string;
+  image: string;
 };
 
 export const projectsData: Project[] = [
@@ -14,21 +15,7 @@ export const projectsData: Project[] = [
     technologies: ["React.js", "Next.js", "TypeScript", "TailwindCSS"],
     github: "https://github.com/Eglantinenf/my-portfolio",
     liveDemo: "https://nothingfornow.com",
-  },
-  {
-    title: "ToDo App",
-    description:
-      "A simple and intuitive ToDo application with filtering, persistence, and responsive UI.",
-    technologies: ["React", "LocalStorage"],
-    github: "https://github.com/Eglantinenf/TodoList-React.js-Tailwind.git",
-    liveDemo: "https://nothingfornow.com",
-  },
-  {
-    title: "Weather App",
-    description: "Interactive React project using live API data.",
-    technologies: ["React", "TailwindCSS", "live API"],
-    github: "https://github.com/Eglantinenf/WeatherApp-React.js-Tailwind-.git",
-    liveDemo: "https://nothing.com",
+    image: "/projects/my-portfolio.png",
   },
   {
     title: "Mental Health",
@@ -37,6 +24,24 @@ export const projectsData: Project[] = [
     technologies: ["HTML and CSS", "vanillajs"],
     github: "https://github.com/Eglantinenf/Mental-Health.git",
     liveDemo: "https://nothingfornow.com",
+    image: "/projects/mentalHealth.png",
+  },
+  {
+    title: "ToDo App",
+    description:
+      "A simple and intuitive ToDo application with filtering, persistence, and responsive UI.",
+    technologies: ["React", "LocalStorage"],
+    github: "https://github.com/Eglantinenf/TodoList-React.js-Tailwind.git",
+    liveDemo: "https://nothingfornow.com",
+    image: "/projects/todolist.png",
+  },
+  {
+    title: "Weather App",
+    description: "Interactive React project using live API data.",
+    technologies: ["React", "TailwindCSS", "live API"],
+    github: "https://github.com/Eglantinenf/WeatherApp-React.js-Tailwind-.git",
+    liveDemo: "https://nothing.com",
+    image: "/projects/weather.png",
   },
   {
     title: "Course Tracker",
@@ -45,6 +50,7 @@ export const projectsData: Project[] = [
     technologies: ["HTML and CSS", "LocalStorage", "TailwindCSS", "vanillajs"],
     github: "https://github.com/Eglantinenf/Course-Tracker.git",
     liveDemo: "https://nothingfornow.com",
+    image: "/projects/courseTracker.png",
   },
   {
     title: "Library Management API",
@@ -53,6 +59,7 @@ export const projectsData: Project[] = [
     technologies: ["Backend", "Node.js", "vanillajs"],
     github: "https://github.com/Eglantinenf/Library-Management-API.git",
     liveDemo: "https://nothingfornow.com",
+    image: "/projects/libraryapi.png",
   },
   {
     title: "Login using firebase",
@@ -61,6 +68,7 @@ export const projectsData: Project[] = [
     technologies: ["Backend", "HTML and CSS", "vanillajs", "firebase"],
     github: "https://github.com/Eglantinenf/POST-users-to-firebase.git",
     liveDemo: "https://nothing.com",
+    image: "/projects/firebase.png",
   },
   {
     title: "Survey Form",
@@ -69,6 +77,7 @@ export const projectsData: Project[] = [
     technologies: ["HTML and CSS", "vanillajs"],
     github: "https://github.com/Eglantinenf/Survey-Form.git",
     liveDemo: "https://nothing.com",
+    image: "/projects/survey.png",
   },
   {
     title: "Tirbute Page",
@@ -77,6 +86,7 @@ export const projectsData: Project[] = [
     technologies: ["HTML and CSS", "vanillajs"],
     github: "https://github.com/Eglantinenf/Tirbute-Page-.git",
     liveDemo: "https://nothing.com",
+    image: "/projects/tribute.png",
   },
   {
     title: "Healthy Food Restaurant",
@@ -85,6 +95,7 @@ export const projectsData: Project[] = [
     technologies: ["HTML and CSS", "vanillajs", "figma"],
     github: "https://github.com/Eglantinenf/Healthy-Food-Restaurant.git",
     liveDemo: "https://nothing.com",
+    image: "/projects/food.png",
   },
   {
     title: "Pet Store",
@@ -93,6 +104,7 @@ export const projectsData: Project[] = [
     technologies: ["HTML and CSS", "vanillajs", "figma"],
     github: "https://github.com/Eglantinenf/Pet-store.git",
     liveDemo: "https://nothing.com",
+    image: "/projects/pet.png",
   },
   {
     title: "Text Generator",
@@ -100,6 +112,7 @@ export const projectsData: Project[] = [
     technologies: ["HTML and CSS", "vanillajs"],
     github: "https://github.com/Eglantinenf/Text-Generator.git",
     liveDemo: "https://nothingfornow.com",
+    image: "/projects/textgen.png",
   },
   {
     title: "simple calculator",
@@ -107,6 +120,7 @@ export const projectsData: Project[] = [
     technologies: ["HTML and CSS", "vanillajs"],
     github: "https://github.com/Eglantinenf/calculator-old-projects-.git",
     liveDemo: "https://nothingfornow.com",
+    image: "/projects/calculator.png",
   },
   {
     title: "Simple Login Form",
@@ -114,5 +128,6 @@ export const projectsData: Project[] = [
     technologies: ["HTML and CSS", "vanillajs"],
     github: "https://github.com/Eglantinenf/simple-login-form.git",
     liveDemo: "https://nothing.com",
+    image: "/projects/login.png",
   },
 ];
