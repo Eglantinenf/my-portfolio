@@ -30,4 +30,89 @@ export const projectsData: Project[] = [
     github: "https://github.com/Eglantinenf/WeatherApp-React.js-Tailwind-.git",
     liveDemo: "https://nothing.com",
   },
+  {
+    title: "Mental Health",
+    description:
+      "This project is dedicated to promoting mental health and providing support to those in need. It consists of various resources and motivational content aimed at offering hope, inspiration, and encouragement.",
+    technologies: ["HTML and CSS", "vanillajs"],
+    github: "https://github.com/Eglantinenf/Mental-Health.git",
+    liveDemo: "https://nothingfornow.com",
+  },
+  {
+    title: "Course Tracker",
+    description:
+      "Created for personal use to help me monitor the remaining time for my courses.",
+    technologies: ["HTML and CSS", "LocalStorage", "TailwindCSS", "vanillajs"],
+    github: "https://github.com/Eglantinenf/Course-Tracker.git",
+    liveDemo: "https://nothingfornow.com",
+  },
+  {
+    title: "Library Management API",
+    description:
+      "It includes all essential features such as user registration , book management (add, update, delete), borrowing books, validation, late fee and etc...",
+    technologies: ["Backend", "Node.js", "vanillajs"],
+    github: "https://github.com/Eglantinenf/Library-Management-API.git",
+    liveDemo: "https://nothingfornow.com",
+  },
+  {
+    title: "Login using firebase",
+    description:
+      "Posting user information such as first name and last name and password on firebase.",
+    technologies: ["Backend", "HTML and CSS", "vanillajs", "firebase"],
+    github: "https://github.com/Eglantinenf/POST-users-to-firebase.git",
+    liveDemo: "https://nothing.com",
+  },
+  {
+    title: "Survey Form",
+    description:
+      "This project is one of the required projects to earn Responsive Web Design Certification in freecodecamp.org",
+    technologies: ["HTML and CSS", "vanillajs"],
+    github: "https://github.com/Eglantinenf/Survey-Form.git",
+    liveDemo: "https://nothing.com",
+  },
+  {
+    title: "Tirbute Page",
+    description:
+      "This project is one of the required projects to earn Responsive Web Design Certification in freecodecamp.org",
+    technologies: ["HTML and CSS", "vanillajs"],
+    github: "https://github.com/Eglantinenf/Tirbute-Page-.git",
+    liveDemo: "https://nothing.com",
+  },
+  {
+    title: "Healthy Food Restaurant",
+    description:
+      "This project is a stylish website for a healthy food restaurant, developed from a Figma template to practice CSS and front-end development skills",
+    technologies: ["HTML and CSS", "vanillajs", "figma"],
+    github: "https://github.com/Eglantinenf/Healthy-Food-Restaurant.git",
+    liveDemo: "https://nothing.com",
+  },
+  {
+    title: "Pet Store",
+    description:
+      "just a simple practice from Figma template, not responsive and just html & css",
+    technologies: ["HTML and CSS", "vanillajs", "figma"],
+    github: "https://github.com/Eglantinenf/Pet-store.git",
+    liveDemo: "https://nothing.com",
+  },
+  {
+    title: "Text Generator",
+    description: "a Text Generator to save your time for big projects",
+    technologies: ["HTML and CSS", "vanillajs"],
+    github: "https://github.com/Eglantinenf/Text-Generator.git",
+    liveDemo: "https://nothingfornow.com",
+  },
+  {
+    title: "simple calculator",
+    description: "a simple Calculator from my first ever practice projects",
+    technologies: ["HTML and CSS", "vanillajs"],
+    github: "https://github.com/Eglantinenf/calculator-old-projects-.git",
+    liveDemo: "https://nothingfornow.com",
+  },
+  {
+    title: "Simple Login Form",
+    description: "a simple LoginForm from my first ever practice projects",
+    technologies: ["HTML and CSS", "vanillajs"],
+    github: "https://github.com/Eglantinenf/simple-login-form.git",
+    liveDemo: "https://nothing.com",
+  },
 ];
