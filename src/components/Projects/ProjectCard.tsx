@@ -21,6 +21,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         boxShadow: "0 10px 20px rgba(0,0,0,0.15)",
       }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      role="group"
+      aria-label={`Project: ${title}`}
       className="rounded-3xl shadow-xl p-6 bg-gradient-to-br from-white/80 to-gray-100/90 backdrop-blur-md dark:from-[#1f1235]/90 dark:to-[#2a1742]/80 border border-white/10 dark:border-white/5"
     >
       <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
@@ -47,6 +49,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           href={github}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label={`view ${title} project on Github`}
           className="flex items-center gap-2 text-sm text-purple-50 bg-purple-700 hover:bg-purple-800 px-3 py-1.5 rounded-md shadow-sm transition-colors"
         >
           <Github size={16} />
@@ -57,6 +60,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           href={liveDemo}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label={`open live demo for ${title} project`}
           className="flex items-center gap-2 text-sm text-purple-700 dark:text-purple-300 border border-purple-400 px-3 py-1.5 rounded-md hover:bg-purple-200/20 transition-colors"
         >
           <ExternalLink size={16} />

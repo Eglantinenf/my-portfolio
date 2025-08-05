@@ -23,14 +23,27 @@ const ProjectsSection: React.FC = () => {
         )
   );
   return (
-    <section className="section-bg px-4 sm:px-8 md:px-16 py-16" id="projects">
-      <h2 className="text-3xl sm:text-4xl font-bold text-center text-purple-700 dark:text-purple-300 mb-10">
+    <section
+      role="region"
+      aria-labelledby="projects-heading"
+      className="section-bg px-4 sm:px-8 md:px-16 py-16"
+      id="projects"
+    >
+      <h2
+        id="projects-heading"
+        className="text-3xl sm:text-4xl font-bold text-center text-purple-700 dark:text-purple-300 mb-10"
+      >
         My Projects
       </h2>
-      <div className="flex flex-wrap justify-center gap-4">
+      <div
+        role="group"
+        aria-label="Project filters"
+        className="flex flex-wrap justify-center gap-4"
+      >
         {filters.map((filter) => (
           <button
             key={filter}
+            aria-pressed={selectedFilter === filter}
             onClick={() => setSelectedFilter(filter)}
             className={`px-4 py-2 rounded-full border transition-all duration-300 text-sm font-medium
     ${
