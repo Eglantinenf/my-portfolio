@@ -62,14 +62,14 @@ I’m creating a **modern, animated, and interactive portfolio** using **React, 
 
 [Live Demo Coming Soon]
 
-Meanwhile, check out my [projects here](#https://github.com/Eglantinenf?tab=repositories).
+Meanwhile, check out my [projects here](https://github.com/Eglantinenf?tab=repositories).
 
 ---
 
 ## 📬 Get in Touch
 
 - **Email:** farjamiinastaran@gmail.com
-- **LinkedIn:** [linkedin.com/in/nastaran-farjami](#https://www.linkedin.com/in/nastaran-farjami-63b33928b)
+- **LinkedIn:** [linkedin.com/in/nastaran-farjami](https://www.linkedin.com/in/nastaran-farjami-63b33928b)
 - **Portfolio:** (Coming soon)
 
 ---
