@@ -72,7 +72,3 @@ Meanwhile, check out my [projects here](https://github.com/Eglantinenf?tab=repos
 - **LinkedIn:** [linkedin.com/in/nastaran-farjami](https://www.linkedin.com/in/nastaran-farjami-63b33928b)
 - **Portfolio:** (Coming soon)
 
----
-
-![Nastaran's GitHub stats](https://github-readme-stats.vercel.app/api?Eglantinenf=Eglantinenf&show_icons=true&theme=radical)  
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?Eglantinenf=Eglantinenf&layout=compact&theme=radical)
