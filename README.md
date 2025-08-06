@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 🚀 My Portfolio
 
-## Getting Started
+I’m creating a **modern, animated, and interactive portfolio** using **React, TypeScript, TailwindCSS**, and **Framer Motion**.
 
-First, run the development server:
+### ✅ Completed Sections:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Hero Section**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  - **Full-screen gradient background** with animated bubbles
+  - **Dynamic typing effect** for tagline
+  - **Floating skills animation**
+  - **Animated Terminal (for large screens)**
+  - Profile photo in a clean, minimal layout
+  - Download Resume button
+  - Dark/Light mode toggle
+  - **Fully screen reader accessible**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Navbar**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+  - Sticky, **responsive navigation bar**
+  - **Hamburger menu** for mobile
+  - Smooth scroll between sections
+  - **ARIA roles for accessibility**
 
-## Learn More
+- **About Me**
 
-To learn more about Next.js, take a look at the following resources:
+  - **Animated vertical timeline** showcasing my developer journey
+  - Minimal and elegant design with subtle motion effects
+  - **Accessible with keyboard navigation & ARIA labels**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **My Projects**
+  - **Interactive project cards** with hover animations
+  - Each card includes:
+    - **Screenshot preview**
+    - **Title & description**
+    - **Tech stack badges**
+    - **GitHub link & Live demo**
+  - **Filter feature** by category (All, React, TypeScript, etc.)
+  - **Screen reader-friendly and keyboard navigable**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+### 🔨 Upcoming Sections:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Blog (Featured posts with filters and search)
+- Contact section with a sleek form and animations
+- Footer with dynamic social links
+- **Performance Testing & Optimization to achieve Lighthouse100**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** React, Next.js, TypeScript, TailwindCSS, Framer Motion
+- **Tools:** Git, GitHub, VS Code, NPM, Vercel
+- **Accessibility:** ARIA roles, keyboard navigation, screen reader support
+- **Performance Optimization** (code splitting, lazy loading, image compression)
+
+---
+
+## 🌐 View My Portfolio
+
+[Live Demo Coming Soon]
+
+Meanwhile, check out my [projects here](#https://github.com/Eglantinenf?tab=repositories).
+
+---
+
+## 📬 Get in Touch
+
+- **Email:** farjamiinastaran@gmail.com
+- **LinkedIn:** [linkedin.com/in/nastaran-farjami](#https://www.linkedin.com/in/nastaran-farjami-63b33928b)
+- **Portfolio:** (Coming soon)
+
+---
+
+![Nastaran's GitHub stats](https://github-readme-stats.vercel.app/api?Eglantinenf=Eglantinenf&show_icons=true&theme=radical)  
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?Eglantinenf=Eglantinenf&layout=compact&theme=radical)
