@@ -46,6 +46,7 @@ I’m creating a **modern, animated, and interactive portfolio** using **React, 
 - Contact section with a sleek form and animations
 - Footer with dynamic social links
 - **Performance Testing & Optimization to achieve Lighthouse100**
+- **Language Switcher (fa / en)** for bilingual support 
 
 ---
 
