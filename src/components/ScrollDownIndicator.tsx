@@ -3,8 +3,15 @@
 import { motion } from "framer-motion";
 
 const ScrollDownIndicator: React.FC = () => {
+  const handleScroll = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <motion.div
+      onClick={handleScroll}
       aria-label="Scroll down"
       className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer"
       animate={{ y: [0, 10, 0] }}

@@ -24,7 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       role="group"
       aria-label={`Project: ${title}`}
-      className="rounded-3xl shadow-xl p-6 bg-gradient-to-br from-white/80 to-gray-100/90 backdrop-blur-md dark:from-[#1f1235]/90 dark:to-[#2a1742]/80 border border-white/10 dark:border-white/5"
+      className="flex flex-col h-full rounded-3xl shadow-xl p-6 bg-gradient-to-br from-white/80 to-gray-100/90 backdrop-blur-md dark:from-[#1f1235]/90 dark:to-[#2a1742]/80 border border-white/10 dark:border-white/5"
     >
       <div className="mb-4 rounded-xl overflow-hidden">
         <Image
@@ -32,27 +32,29 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           alt={`${title} screenshot`}
           width={600}
           height={400}
-          className="w-full h-auto object-cover rounded-xl"
+          className="w-full h-[200px] object-cover rounded-xl"
           priority={false}
         />
       </div>
-      <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
-        {title}
-      </h3>
+      <div className="flex-grow">
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          {title}
+        </h3>
 
-      <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mt-3">
-        {description}
-      </p>
+        <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mt-3">
+          {description}
+        </p>
 
-      <div className="flex flex-wrap gap-2 mt-4">
-        {technologies.map((tech) => (
-          <span
-            key={tech}
-            className="bg-purple-100 dark:bg-purple-800/20 text-purple-700 dark:text-purple-300 px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:scale-105 transition-transform"
-          >
-            {tech}
-          </span>
-        ))}
+        <div className="flex flex-wrap gap-2 mt-4">
+          {technologies.map((tech) => (
+            <span
+              key={tech}
+              className="bg-purple-100 dark:bg-purple-800/20 text-purple-700 dark:text-purple-300 px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:scale-105 transition-transform"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
       </div>
 
       <div className="flex items-center gap-3 mt-6">
