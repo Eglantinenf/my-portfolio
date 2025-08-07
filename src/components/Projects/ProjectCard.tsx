@@ -18,11 +18,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       whileHover={{
-        scale: 1.02,
-        y: -4,
-        boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
+        scale: 1.03,
+        y: -6,
+        boxShadow: "0 12px 28px rgba(0, 0, 0, 0.12)",
       }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      transition={{
+        duration: 0.18,
+        ease: [0.4, 0, 0.2, 1],
+      }}
       role="group"
       aria-label={`Project: ${title}`}
       className="flex flex-col h-full rounded-xl shadow-md p-4 bg-white/70 dark:bg-[#1b112d]/90 backdrop-blur-md border border-white/10 dark:border-white/5 transition-all"
