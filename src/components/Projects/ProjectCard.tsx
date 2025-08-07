@@ -1,3 +1,4 @@
+// ProjectCard.tsx — Sleeker and More Professional
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -17,53 +18,54 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       whileHover={{
-        scale: 1.05,
-        y: -5,
-        boxShadow: "0 10px 20px rgba(0,0,0,0.15)",
+        scale: 1.02,
+        y: -4,
+        boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
       }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       role="group"
       aria-label={`Project: ${title}`}
-      className="flex flex-col h-full rounded-3xl shadow-xl p-6 bg-gradient-to-br from-white/80 to-gray-100/90 backdrop-blur-md dark:from-[#1f1235]/90 dark:to-[#2a1742]/80 border border-white/10 dark:border-white/5"
+      className="flex flex-col h-full rounded-xl shadow-md p-4 bg-white/70 dark:bg-[#1b112d]/90 backdrop-blur-md border border-white/10 dark:border-white/5 transition-all"
     >
-      <div className="mb-4 rounded-xl overflow-hidden">
+      <div className="rounded-lg overflow-hidden aspect-video mb-3">
         <Image
           src={image}
           alt={`${title} screenshot`}
           width={600}
           height={400}
-          className="w-full h-[200px] object-cover rounded-xl"
+          className="w-full h-full object-cover"
           priority={false}
         />
       </div>
+
       <div className="flex-grow">
-        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-1">
           {title}
         </h3>
 
-        <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mt-3">
+        <p className="text-sm text-gray-700 dark:text-gray-300 line-clamp-4">
           {description}
         </p>
-
-        <div className="flex flex-wrap gap-2 mt-4">
-          {technologies.map((tech) => (
-            <span
-              key={tech}
-              className="bg-purple-100 dark:bg-purple-800/20 text-purple-700 dark:text-purple-300 px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:scale-105 transition-transform"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
       </div>
 
-      <div className="flex items-center gap-3 mt-6">
+      <div className="flex flex-wrap gap-2 mt-3">
+        {technologies.map((tech) => (
+          <span
+            key={tech}
+            className="cursor-pointer bg-purple-100 dark:bg-purple-800/30 text-purple-700 dark:text-purple-200 px-2.5 py-0.5 rounded-full text-[11px] font-medium transition-transform transform hover:scale-105 hover:brightness-110 hover:shadow-sm"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
+
+      <div className="flex items-center gap-3 mt-4">
         <a
           href={github}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={`view ${title} project on Github`}
-          className="flex items-center gap-2 text-sm text-purple-50 bg-purple-700 hover:bg-purple-800 px-3 py-1.5 rounded-md shadow-sm transition-colors"
+          aria-label={`View ${title} on GitHub`}
+          className="flex items-center gap-1.5 text-xs font-medium text-purple-700 dark:text-purple-300 border border-purple-300 dark:border-purple-500 px-3 py-1.5 rounded-full hover:bg-purple-100 dark:hover:bg-purple-800/30 transition"
         >
           <Github size={16} />
           GitHub
@@ -73,8 +75,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           href={liveDemo}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={`open live demo for ${title} project`}
-          className="flex items-center gap-2 text-sm text-purple-700 dark:text-purple-300 border border-purple-400 px-3 py-1.5 rounded-md hover:bg-purple-200/20 transition-colors"
+          aria-label={`Open live demo of ${title}`}
+          className="flex items-center gap-1.5 text-xs font-medium text-white bg-purple-600 hover:bg-purple-700 dark:bg-purple-400 dark:hover:bg-purple-500 dark:text-black px-3 py-1.5 rounded-full transition"
         >
           <ExternalLink size={16} />
           Live Demo
