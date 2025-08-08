@@ -2,11 +2,11 @@
 
 import { Orbitron, Russo_One } from "next/font/google";
 import React from "react";
-import AnimatedBackground from "./AnimatedBackground";
-import AnimatedTerminal from "./AnimatedTerminal";
+import AnimatedBackground from "./ui/AnimatedBackground";
+import AnimatedTerminal from "./ui/AnimatedTerminal";
 import useTypingEffect from "@/hooks/useTypingEffects";
 import skills from "@/data/skills";
-import ScrollDownIndicator from "./ScrollDownIndicator";
+import ScrollDownIndicator from "./ui/ScrollDownIndicator";
 import Image from "next/image";
 import { useTheme } from "@/context/ThemeContext";
 
