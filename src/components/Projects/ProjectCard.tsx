@@ -2,7 +2,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import type { Project } from "./ProjectsData";
+import type { Project } from "../../data/ProjectsData";
 import { Github, ExternalLink } from "lucide-react";
 
 type ProjectCardProps = {

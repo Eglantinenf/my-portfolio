@@ -18,7 +18,7 @@ export const BlogPosts: BlogPost[] = [
     date: "2025-08-08",
     tags: ["Story", "Python", "Javascript"],
     author: "Nastaran Farjami",
-    image: "/public",
+    image: "/images/1.jpg",
     readTime: "10 min",
   },
   {
@@ -28,7 +28,7 @@ export const BlogPosts: BlogPost[] = [
     date: "2025-08-09",
     tags: ["TypeScript", "JavaScript"],
     author: "Nastaran Farjami",
-    image: "/public",
+    image: "/images/2.png",
     readTime: "5 min",
   },
   {
@@ -38,7 +38,7 @@ export const BlogPosts: BlogPost[] = [
     date: "2025-08-10",
     tags: ["cleancode", "React", "Javascript"],
     author: "Nastaran Farjami",
-    image: "/public",
+    image: "/images/3.png",
     readTime: "7 min",
   },
 ];

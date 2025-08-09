@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { projectsData } from "./ProjectsData";
+import { projectsData } from "../../data/ProjectsData";
 import ProjectCard from "./ProjectCard";
 
 const filters = [
