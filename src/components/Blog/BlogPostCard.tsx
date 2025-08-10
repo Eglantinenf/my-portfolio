@@ -1,10 +1,31 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { BlogPost } from "@/data/blogPosts";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const BlogPostCard: React.FC<{ post: BlogPost }> = ({ post }) => {
+  const [formattedDate, setFormattedDate] = useState("");
+
+  useEffect(() => {
+    setFormattedDate(
+      new Date(post.date).toLocaleDateString(undefined, {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      })
+    );
+  }, [post.date]);
+
   return (
-    <article className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+    <motion.article
+      className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.1 }}
+      viewport={{ once: true }}
+    >
       <a href={post.url || "#"} className="block">
         <Image
           src={post.image}
@@ -34,12 +55,10 @@ const BlogPostCard: React.FC<{ post: BlogPost }> = ({ post }) => {
         </div>
       </a>
       <footer className="flex items-center justify-between px-4 py-3 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-sm">
-        <time dateTime={post.date}>
-          {new Date(post.date).toLocaleDateString()}
-        </time>
+        <time dateTime={post.date}>{formattedDate}</time>
         <span>{post.readTime}</span>
       </footer>
-    </article>
+    </motion.article>
   );
 };
 
