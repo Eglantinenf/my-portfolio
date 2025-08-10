@@ -10,10 +10,10 @@ const BlogPostCard: React.FC<{ post: BlogPost }> = ({ post }) => {
 
   useEffect(() => {
     setFormattedDate(
-      new Date(post.date).toLocaleDateString(undefined, {
+      new Date(post.date).toLocaleDateString("fa-IR-u-nu-latn", {
         year: "numeric",
-        month: "short",
-        day: "numeric",
+        month: "2-digit",
+        day: "2-digit",
       })
     );
   }, [post.date]);
