@@ -26,7 +26,7 @@ const BlogPostCard: React.FC<{ post: BlogPost }> = ({ post }) => {
       transition={{ duration: 0.5, ease: "easeInOut" }}
       viewport={{ once: true }}
     >
-      <a href={post.url || "#"} className="block">
+      <a href={`/blog/${post.slug}`} className="block">
         <Image
           src={post.image}
           alt={post.title}
