@@ -7,6 +7,14 @@ import { use } from "react";
 
 type Params = { params: Promise<{ slug: string }> };
 
+const formatPersianDate = (dateString: string) => {
+  const date = new Date(dateString);
+  return new Intl.DateTimeFormat("fa-IR-u-nu-latn", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(date);
+};
 export default function BlogPostPage({ params }: Params) {
   const router = useRouter();
   const { slug } = use(params);
@@ -38,9 +46,7 @@ export default function BlogPostPage({ params }: Params) {
       <article className="max-w-3xl mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
         <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-6">
-          <time dateTime={post.date}>
-            {new Date(post.date).toLocaleDateString()}
-          </time>
+          <time dateTime={post.date}>{formatPersianDate(post.date)} </time>
           <span>•</span>
           <span>{post.author}</span>
           <span>•</span>
