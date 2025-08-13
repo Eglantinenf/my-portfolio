@@ -3,12 +3,14 @@ import { BlogPosts } from "@/data/blogPosts";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { use } from "react";
 
-type Params = { params: { slug: string } };
+type Params = { params: Promise<{ slug: string }> };
 
 export default function BlogPostPage({ params }: Params) {
   const router = useRouter();
-  const post = BlogPosts.find((p) => p.slug === params.slug);
+  const { slug } = use(params);
+  const post = BlogPosts.find((p) => p.slug === slug);
   if (!post) {
     return notFound();
   }
