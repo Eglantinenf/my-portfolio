@@ -5,10 +5,7 @@ import { motion } from "framer-motion";
 
 const BlogSection = () => {
   return (
-    <section
-      id="blog"
-      className="section-bg max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"
-    >
+    <section id="blog" className="section-bg px-4 sm:px-6 lg:px-8 py-20">
       <motion.h2
         className="text-3xl font-extrabold text-gray-900 dark:text-gray-100 mb-8"
         initial={{ opacity: 0, y: 20 }}
