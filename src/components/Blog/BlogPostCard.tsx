@@ -4,6 +4,8 @@ import Image from "next/image";
 import { BlogPost } from "@/data/blogPosts";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 const BlogPostCard: React.FC<{ post: BlogPost }> = ({ post }) => {
   const [formattedDate, setFormattedDate] = useState("");
@@ -39,9 +41,11 @@ const BlogPostCard: React.FC<{ post: BlogPost }> = ({ post }) => {
           <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
             {post.title}
           </h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
-            {post.text}
-          </p>
+          <div className="text-gray-700 dark:text-gray-300 text-sm mb-4 prose dark:prose-invert max-w-none">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {post.text}
+            </ReactMarkdown>
+          </div>
           <div className="flex flex-wrap gap-2 mt-2 px-4">
             {post.tags.map((tag) => (
               <span
