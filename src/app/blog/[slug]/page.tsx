@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { use } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -137,8 +139,8 @@ export default function BlogPostPage({ params }: Params) {
           />
         </div>
 
-        <div className="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300">
-          {post.text}
+        <div className="text-gray-700 dark:text-gray-300 text-sm mb-4 prose dark:prose-invert max-w-none">
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.text}</ReactMarkdown>
         </div>
       </article>
     </div>
