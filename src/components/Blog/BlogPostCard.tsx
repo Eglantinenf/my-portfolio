@@ -40,7 +40,7 @@ const BlogPostCard: React.FC<{ post: BlogPost }> = ({ post }) => {
             {post.title}
           </h3>
           <div className="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300">
-            {post.text}
+            {post.summary}
           </div>
           <div className="flex flex-wrap gap-2 mt-2 px-4">
             {post.tags.map((tag) => (

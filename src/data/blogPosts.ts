@@ -4,6 +4,7 @@ export interface BlogPost {
   id: string;
   title: string;
   slug: string;
+  summary?: string;
   text: string;
   date: string;
   tags: string[];
@@ -18,6 +19,7 @@ export const BlogPosts: BlogPost[] = [
     id: "post-001",
     slug: "my-journey-to-finding-my-love-for-coding",
     title: "My Journey to Finding My Love for Coding",
+    summary: "a story about how an HTML course change my whole carrer path",
     text: blogPost001Text,
     date: "2025-08-15",
     tags: ["Story", "JavaScript", "Frontend"],

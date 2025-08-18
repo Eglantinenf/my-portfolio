@@ -139,7 +139,17 @@ export default function BlogPostPage({ params }: Params) {
           />
         </div>
 
-        <div className="text-gray-700 dark:text-gray-300 text-sm mb-4 prose dark:prose-invert max-w-none">
+        <div
+          className="
+    prose prose-lg dark:prose-invert max-w-none
+    leading-8 tracking-wide
+    text-gray-800 dark:text-gray-300
+    [&>p]:mb-6 [&>h2]:mt-10 [&>h2]:mb-4 [&>h3]:mt-8 [&>h3]:mb-3
+    [&>ul]:list-disc [&>ul]:pl-6 [&>ol]:list-decimal [&>ol]:pl-6
+    [&>blockquote]:border-l-4 [&>blockquote]:pl-4 [&>blockquote]:italic
+    [&>img]:rounded-lg [&>img]:shadow-md
+  "
+        >
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.text}</ReactMarkdown>
         </div>
       </article>
