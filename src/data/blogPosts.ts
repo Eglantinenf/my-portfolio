@@ -1,5 +1,6 @@
 import { blogPost001Text } from "./blogTexts";
 import { blogPost002Text } from "./blogTexts";
+import { blogPost003Text } from "./blogTexts";
 
 export interface BlogPost {
   id: string;
@@ -32,7 +33,7 @@ export const BlogPosts: BlogPost[] = [
   {
     id: "post-002",
     slug: "learning-ts",
-    title: "learning ts",
+    title: "How i started to learn Typescripts",
     summary: "Why TypeScript changed my coding style and productivity...",
     text: blogPost002Text,
     date: "2025-08-09",
@@ -43,13 +44,14 @@ export const BlogPosts: BlogPost[] = [
   },
   {
     id: "post-003",
-    slug: "some-points-about-clean-coding",
-    title: "some points about clean coding",
-    text: "i will add the text later",
+    slug: "react-love-story",
+    title: "React.js learning story",
+    summary: "React love story...",
+    text: blogPost003Text,
     date: "2025-08-10",
     tags: ["cleancode", "React", "Javascript"],
     author: "Nastaran Farjami",
-    image: "/images/3.png",
+    image: "/images/3.jpg",
     readTime: "7 min",
   },
 ];

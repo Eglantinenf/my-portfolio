@@ -27,12 +27,12 @@ const BlogPostCard: React.FC<{ post: BlogPost }> = ({ post }) => {
       viewport={{ once: true }}
     >
       <a href={`/blog/${post.slug}`} className="flex flex-col h-full">
-        <div className="w-full h-48 relative">
+        <div className="aspect-video relative">
           <Image
             src={post.image}
             alt={post.title}
             fill
-            className="object-cover rounded-t-lg"
+            className="w-full h-full object-cover rounded-t-lg"
             loading="lazy"
           />
         </div>
@@ -54,11 +54,11 @@ const BlogPostCard: React.FC<{ post: BlogPost }> = ({ post }) => {
             ))}
           </div>
         </div>
+        <footer className="flex mt-auto items-center justify-between px-4 py-3 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-sm">
+          <time dateTime={post.date}>{formattedDate}</time>
+          <span>{post.readTime}</span>
+        </footer>
       </a>
-      <footer className="flex mt-auto items-center justify-between px-4 py-3 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-sm">
-        <time dateTime={post.date}>{formattedDate}</time>
-        <span>{post.readTime}</span>
-      </footer>
     </motion.article>
   );
 };

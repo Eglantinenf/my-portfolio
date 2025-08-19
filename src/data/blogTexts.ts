@@ -99,3 +99,18 @@ That day wasn’t just about earning a grade. It was about proving to myself tha
 And that’s how TypeScript became not just another tool in my developer journey — but a turning point in how I approach learning, growth, and confidence as a programmer.
 
 `;
+
+export const blogPost003Text = `
+## Falling in Love with React
+
+Like many JavaScript developers, I jumped into React right after finishing the basics of JS. Honestly, it was a bit rushed — I dove straight into Jonas Schmedtmann’s **React + Redux** course on Udemy. The course was excellent, but to be honest, I never actually finished it.
+
+Instead, I got the chance to join a local startup at my university, where I learned React through practice and real-world projects. That hands-on experience turned out to be even more valuable. Thanks to the foundation I had from Jonas’s course, I could combine what I learned from the documentation with actual project work.
+
+Sometimes I wonder if I should have completed the entire course — especially since Jonas later updated it to include **Next.js**. But there’s no going back. Over time, my learning style shifted. I no longer enjoy watching hours of long video tutorials. Instead, I find myself more comfortable and satisfied with reading documentation and building things directly.
+
+Looking ahead, I definitely want to deepen my knowledge of **Redux** and dive further into **Next.js** (I’ll write more about that in a future post 😉).
+
+One thing I’ll never forget from that startup was how strongly they insisted I switch to **Vue.js** or even **Dart**, just to make the project move faster. But my love for React wouldn’t let me. I didn’t want to abandon it — and honestly, I’m glad I stayed true to it.
+
+`;
