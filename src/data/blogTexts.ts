@@ -60,3 +60,42 @@ They tell me:
 But the truth is…
 When you love something, the challenge doesn’t scare you — it inspires you.
 `;
+
+export const blogPost002Text = `
+### How TypeScript Changed My Journey as a Developer
+
+I always wanted to learn TypeScript — but procrastination kept stopping me. It was one of those things I knew I should do, yet I kept pushing it aside.
+
+Then, in one of my university classes — *Design and Implementation of Programming Languages* — my professor announced that everyone would have to give a presentation on a programming language. Naturally, I wanted to choose JavaScript. But the professor started from the left side of the class, and of course, I was sitting on the far right. By the time it was my turn, all the popular languages were already taken: Python, JavaScript, HTML, CSS, Swift, R, Go, Dart… everything.
+
+When it came to me, I asked:
+*"Can I choose a framework, like React?"*
+The professor shook his head. *“No, only languages.”*
+
+At that moment, something inside me said: *“This is your chance.”*
+I had always been curious about TypeScript, and deep down, I wanted to challenge myself. So I said: *“Then I’ll choose TypeScript.”*
+He nodded in approval.
+
+I had five weeks to prepare.
+
+During those weeks, I poured my heart into the presentation. I designed a Canva template that I’m still proud of [you can see it here](https://www.canva.com/design/DAGlk8BaHZE/GGKK8cesGXbvxn1vQoMGmw/edit?utm_content=DAGlk8BaHZE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton), I read countless documents, and I even refactored some of my old Vanilla JS and React projects into TypeScript.
+
+But preparation wasn’t just about coding. I wanted to deliver something truly memorable.
+I’ve always believed I have strong soft skills, and presenting with confidence is one of them. My goal wasn’t just to *teach* TypeScript — it was to *inspire*.
+
+And when the day came… it worked.
+
+The professor, who is known for being extremely strict, usually finds mistakes in every presentation. He challenges every line, every explanation, every single detail. Most of my classmates struggled under his questions.
+
+But I had practiced differently. I had described his behavior to ChatGPT and told it: *“Pretend you are my professor. Be as cruel as possible. Ask me every hard question you can think of.”*
+So by the time I stood in front of the class, I was ready for him.
+
+Every tough question he asked, I answered calmly and professionally. And when it was over, he said something I’ll never forget:
+
+*“If I give others 2 points, I’ll give you 2 plus. Your presentation was on another level.”*
+
+That day wasn’t just about earning a grade. It was about proving to myself that I could face a challenge, step out of my comfort zone, and master something new.
+
+And that’s how TypeScript became not just another tool in my developer journey — but a turning point in how I approach learning, growth, and confidence as a programmer.
+
+`;

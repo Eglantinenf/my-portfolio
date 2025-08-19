@@ -1,4 +1,5 @@
 import { blogPost001Text } from "./blogTexts";
+import { blogPost002Text } from "./blogTexts";
 
 export interface BlogPost {
   id: string;
@@ -32,7 +33,8 @@ export const BlogPosts: BlogPost[] = [
     id: "post-002",
     slug: "learning-ts",
     title: "learning ts",
-    text: "Why TypeScript changed my coding style and productivity...",
+    summary: "Why TypeScript changed my coding style and productivity...",
+    text: blogPost002Text,
     date: "2025-08-09",
     tags: ["TypeScript", "JavaScript"],
     author: "Nastaran Farjami",

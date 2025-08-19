@@ -20,19 +20,19 @@ const BlogPostCard: React.FC<{ post: BlogPost }> = ({ post }) => {
 
   return (
     <motion.article
-      className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105"
+      className="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
       viewport={{ once: true }}
     >
-      <a href={`/blog/${post.slug}`} className="block">
+      <a href={`/blog/${post.slug}`} className="flex flex-col">
         <Image
           src={post.image}
           alt={post.title}
           width={400}
           height={240}
-          className="w-full h-48 object-cover rounded-t-lg"
+          className="w-full h-full object-cover rounded-t-lg"
           loading="lazy"
         />
         <div className="p-4">
@@ -54,7 +54,7 @@ const BlogPostCard: React.FC<{ post: BlogPost }> = ({ post }) => {
           </div>
         </div>
       </a>
-      <footer className="flex items-center justify-between px-4 py-3 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-sm">
+      <footer className="flex mt-auto items-center justify-between px-4 py-3 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-sm">
         <time dateTime={post.date}>{formattedDate}</time>
         <span>{post.readTime}</span>
       </footer>
