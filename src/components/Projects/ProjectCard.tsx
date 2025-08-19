@@ -1,4 +1,3 @@
-// ProjectCard.tsx — Sleeker and More Professional
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -46,7 +45,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           {title}
         </h3>
 
-        <p className="text-sm text-gray-700 dark:text-gray-300 line-clamp-4">
+        <p className="text-sm text-gray-700 dark:text-gray-300">
           {description}
         </p>
       </div>
