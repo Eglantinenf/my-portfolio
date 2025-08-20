@@ -154,3 +154,18 @@ But instead of feeling defeated, I felt proud. I had proven to myself that I cou
 
 Since then, I’ve kept building on that foundation. I practice regularly, explore new tools, and take on small projects. That summer taught me something even more important than Node.js: I can learn anything, as long as I really want to. And sometimes, the challenges that seem frustrating at first end up being the most rewarding lessons of all.
 `;
+
+export const blogPost006Text = `## Discovering Next.js: From React to Real Projects
+
+After spending a good amount of time learning and practicing React, it felt like the natural next step was to explore **Next.js**. Honestly, I didn’t start with long courses or tutorials. Instead, I decided to dive in through actual projects — the kind of hands-on experience that forces you to learn fast, make mistakes, and figure things out.
+
+My portfolio itself became my first real playground for Next.js. I wanted to understand how React could work together with server-side rendering, routing, and static generation. At first, it was confusing — the concepts were new, and sometimes I wasn’t sure how to organize the project properly. But I found that reading the **official documentation** carefully and experimenting alongside was surprisingly effective.
+
+I’ll be honest: I still feel like a junior beginner. There are moments when I’m not sure if I’m doing something the “best” way, or when a small mistake breaks the layout or functionality. But that’s part of the learning process, and I try to embrace it. Each bug I fix and each feature I implement teaches me something new about how Next.js works under the hood.
+
+One thing I really appreciate about learning this way is that I’m not just memorizing commands or following instructions step by step. I’m actually **building things**, seeing results immediately, and understanding why each decision matters. That makes the whole experience feel much more real and rewarding than passively watching videos.
+
+Looking forward, I know I still have a lot to explore — advanced routing, data fetching, optimizations, and integrating it with TypeScript. But for now, I’m happy taking it one project at a time, learning organically, and slowly gaining confidence.
+
+Next.js may still be new to me, but I feel like I’m finally starting to see how it fits into my workflow as a React developer. And even as a beginner, I can already appreciate the power and flexibility it brings to building modern web apps.
+`;

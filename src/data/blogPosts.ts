@@ -4,6 +4,7 @@ import {
   blogPost003Text,
   blogPost004Text,
   blogPost005Text,
+  blogPost006Text,
 } from "./blogTexts";
 
 export interface BlogPost {
@@ -82,6 +83,19 @@ export const BlogPosts: BlogPost[] = [
     tags: ["Backend", "Node js", "Github", "Git", "MongoDB", "SQL", "NPM"],
     author: "Nastaran Farjami",
     image: "/images/5(1).jpg",
+    readTime: "5 min",
+  },
+  {
+    id: "post-006",
+    slug: "nextjs-story",
+    title: "Next.js and Me: A Beginner’s Story",
+    summary:
+      "I started learning Next.js by jumping straight into real projects like this portfolio. I’m still a beginner, but working hands-on with the framework and its docs has been the best way for me to grow.",
+    text: blogPost006Text,
+    date: "2025-08-12",
+    tags: ["Next js", "React", "Documents"],
+    author: "Nastaran Farjami",
+    image: "/images/6.webp",
     readTime: "5 min",
   },
 ];

@@ -9,7 +9,7 @@ const skills = [
   { name: "Git", slug: "my-journey-to-backend" },
   { name: "GitHub", slug: "my-journey-to-backend" },
   { name: "Vite", slug: "vite" },
-  { name: "Next.js", slug: "nextjs" },
+  { name: "Next.js", slug: "nextjs-story" },
 ];
 
 export default skills;
