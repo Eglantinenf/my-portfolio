@@ -138,3 +138,19 @@ After using Tailwind on several projects, I noticed a big shift in how I write C
 For me, TailwindCSS has been more than just a framework — it’s been a productivity booster. It makes styling feel natural and keeps me focused on what matters most: building great user experiences.
 
 `;
+
+export const blogPost005Text = `
+## How I Learned Node.js and Realized My Potential
+
+The story of how I learned Node.js starts with the city I live in. In my current city, there are almost no programming jobs. Companies mostly use WordPress, and honestly… that’s not my style. I’ve always been drawn to real coding, building things from scratch, not just customizing templates.
+
+Back when I was living in Mashhad, I had the chance to join an internship. But that summer, I couldn’t go back to Mashhad to participate in most internships. The only available position that fit me was a backend internship, and it required learning things I hadn’t touched much before: Node.js, GitHub, Git, MongoDB, and SQL.
+
+Determined to qualify, I dove headfirst into learning all of them. I remember spending two or three weeks just practicing, watching tutorials, reading documentation, and experimenting with small projects. At first, it felt overwhelming, but soon I realized something incredible: I could actually learn all this in such a short time. For me, that was huge. I’ve always been a bit lazy with other courses or topics, but here I felt unstoppable.
+
+When the time came for the interview, I got some disappointing news. They said I was still halfway through my bachelor’s degree, and since I didn’t live in the city permanently, they couldn’t hire me after the internship. I had lost the opportunity.  
+
+But instead of feeling defeated, I felt proud. I had proven to myself that I could learn an entirely new stack—Node.js, databases, Git, and GitHub—in just a couple of weeks. That moment gave me confidence. I realized that if I put my mind to something, I could achieve far more than I had ever thought possible.
+
+Since then, I’ve kept building on that foundation. I practice regularly, explore new tools, and take on small projects. That summer taught me something even more important than Node.js: I can learn anything, as long as I really want to. And sometimes, the challenges that seem frustrating at first end up being the most rewarding lessons of all.
+`;

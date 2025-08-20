@@ -3,6 +3,7 @@ import {
   blogPost002Text,
   blogPost003Text,
   blogPost004Text,
+  blogPost005Text,
 } from "./blogTexts";
 
 export interface BlogPost {
@@ -68,6 +69,19 @@ export const BlogPosts: BlogPost[] = [
     tags: ["CSS", "TailwindCSS", "UI"],
     author: "Nastaran Farjami",
     image: "/images/4.png",
+    readTime: "5 min",
+  },
+  {
+    id: "post-005",
+    slug: "my-journey-to-backend",
+    title: "My Journey Into the Backend World",
+    summary:
+      "A summer internship that didn’t go as planned became the moment I discovered I could learn Node.js, Git, databases, and much more in just a few weeks—and gain the confidence to tackle anything.",
+    text: blogPost005Text,
+    date: "2025-08-12",
+    tags: ["Backend", "Node js", "Github", "Git", "MongoDB", "SQL", "NPM"],
+    author: "Nastaran Farjami",
+    image: "/images/5(1).jpg",
     readTime: "5 min",
   },
 ];
