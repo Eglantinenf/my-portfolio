@@ -9,6 +9,7 @@ import skills from "@/data/skills";
 import ScrollDownIndicator from "./ui/ScrollDownIndicator";
 import Image from "next/image";
 import { useTheme } from "@/context/ThemeContext";
+import Link from "next/link";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -75,15 +76,15 @@ const Hero: React.FC<HeroTypes> = ({ name }) => {
       </div>
 
       <div className="flex flex-wrap justify-center gap-4 mt-6 max-w-xl w-full px-2">
-        {skills.map((skill) => (
-          <button
-            key={skill}
-            type="button"
-            aria-label="skills"
+        {skills.map((skill, idx) => (
+          <Link
+            key={`${skill.slug}-${idx}`}
+            href={`/blog/${skill.slug}`}
+            aria-label={`Read blog about ${skill.name}`}
             className="animate-float bg-pink-900 bg-opacity-80 text-white px-3 py-1 rounded-full text-sm font-medium cursor-pointer transition hover:bg-pink-700 drop-shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-400"
           >
-            {skill}
-          </button>
+            {skill.name}
+          </Link>
         ))}
       </div>
 
