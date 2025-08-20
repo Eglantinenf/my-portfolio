@@ -30,7 +30,7 @@ export const BlogPosts: BlogPost[] = [
     date: "2025-08-15",
     tags: ["Story", "JavaScript", "Frontend"],
     author: "Nastaran Farjami",
-    image: "/images/1.jpg",
+    image: "/images/1.png",
     readTime: "12 min",
   },
   {
