@@ -1,6 +1,9 @@
-import { blogPost001Text } from "./blogTexts";
-import { blogPost002Text } from "./blogTexts";
-import { blogPost003Text } from "./blogTexts";
+import {
+  blogPost001Text,
+  blogPost002Text,
+  blogPost003Text,
+  blogPost004Text,
+} from "./blogTexts";
 
 export interface BlogPost {
   id: string;
@@ -29,9 +32,21 @@ export const BlogPosts: BlogPost[] = [
     image: "/images/1.jpg",
     readTime: "12 min",
   },
-
   {
     id: "post-002",
+    slug: "react-love-story",
+    title: "React.js learning story",
+    summary: "React love story...",
+    text: blogPost003Text,
+    date: "2025-08-07",
+    tags: ["cleancode", "React", "Javascript"],
+    author: "Nastaran Farjami",
+    image: "/images/3.jpg",
+    readTime: "7 min",
+  },
+
+  {
+    id: "post-003",
     slug: "learning-ts",
     title: "How i started to learn Typescripts",
     summary: "Why TypeScript changed my coding style and productivity...",
@@ -40,18 +55,19 @@ export const BlogPosts: BlogPost[] = [
     tags: ["TypeScript", "JavaScript"],
     author: "Nastaran Farjami",
     image: "/images/2.png",
-    readTime: "5 min",
+    readTime: "10 min",
   },
   {
-    id: "post-003",
-    slug: "react-love-story",
-    title: "React.js learning story",
-    summary: "React love story...",
-    text: blogPost003Text,
-    date: "2025-08-10",
-    tags: ["cleancode", "React", "Javascript"],
+    id: "post-004",
+    slug: "how-tailwind-works",
+    title: "Why I Use TailwindCSS",
+    summary:
+      "How TailwindCSS makes styling faster and more fun — my thoughts and experience with it.",
+    text: blogPost004Text,
+    date: "2025-08-12",
+    tags: ["CSS", "TailwindCSS", "UI"],
     author: "Nastaran Farjami",
-    image: "/images/3.jpg",
-    readTime: "7 min",
+    image: "/images/4.png",
+    readTime: "5 min",
   },
 ];

@@ -114,3 +114,27 @@ Looking ahead, I definitely want to deepen my knowledge of **Redux** and dive fu
 One thing I’ll never forget from that startup was how strongly they insisted I switch to **Vue.js** or even **Dart**, just to make the project move faster. But my love for React wouldn’t let me. I didn’t want to abandon it — and honestly, I’m glad I stayed true to it.
 
 `;
+
+export const blogPost004Text = `
+## Why I Use TailwindCSS
+
+TailwindCSS is a utility-first CSS framework that redefines the way developers approach styling. Instead of writing long custom CSS files and switching constantly between HTML and CSS, Tailwind allows you to style elements directly in your markup using small, composable utility classes.
+
+At first, the long class names may look intimidating, but once you get used to them, development becomes much faster and smoother. You no longer need to come up with new class names or worry about overriding styles — everything is applied right where you need it.
+
+### Why TailwindCSS Stands Out
+- **Speed:** No more writing repetitive CSS or jumping between files.  
+- **Consistency:** Tailwind provides a predefined design system with spacing, colors, and typography.  
+- **Customization:** The \`tailwind.config.js\` file gives you full control to extend themes and add your own utilities.  
+- **Responsive by default:** Breakpoints are built in, so handling responsive design feels effortless.  
+- **Smaller production builds:** With Tailwind’s purge feature, unused CSS is automatically removed.  
+
+### Tailwind vs Traditional Frameworks
+Unlike frameworks such as Bootstrap, Tailwind doesn’t lock you into pre-made components with a “framework look.” Instead, it gives you the building blocks to create **your own unique design** faster — without fighting against predefined styles.
+
+### My Experience with Tailwind
+After using Tailwind on several projects, I noticed a big shift in how I write CSS. Styling feels more like building with Lego blocks: simple, reusable, and efficient. It fits especially well with **React** and **Next.js**, since styles live right next to components.  
+
+For me, TailwindCSS has been more than just a framework — it’s been a productivity booster. It makes styling feel natural and keeps me focused on what matters most: building great user experiences.
+
+`;
