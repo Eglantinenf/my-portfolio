@@ -20,13 +20,17 @@ const BlogPostCard: React.FC<{ post: BlogPost }> = ({ post }) => {
 
   return (
     <motion.article
-      className="flex flex-col h-full bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105"
+      className="flex flex-col h-full bg-white dark:bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl border border-white/20 dark:border-gray-700/40 overflow-hidden"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
       viewport={{ once: true }}
     >
-      <a href={`/blog/${post.slug}`} className="flex flex-col h-full">
+      <a
+        href={`/blog/${post.slug}`}
+        aria-label={`Read blog post: ${post.title}`}
+        className="flex flex-col h-full"
+      >
         <div className="aspect-video relative">
           <Image
             src={post.image}
@@ -36,7 +40,7 @@ const BlogPostCard: React.FC<{ post: BlogPost }> = ({ post }) => {
             loading="lazy"
           />
         </div>
-        <div className="flex flex-col flex-grow p-4">
+        <div className="flex flex-col flex-grow p-4 min-h-[200px]">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 h-14">
             {post.title}
           </h3>
