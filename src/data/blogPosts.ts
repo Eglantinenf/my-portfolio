@@ -38,7 +38,8 @@ export const BlogPosts: BlogPost[] = [
     id: "post-002",
     slug: "react-love-story",
     title: "React.js learning story",
-    summary: "React love story...",
+    summary:
+      "I learned React through real projects and practice, and my love for it never let me switch frameworks.",
     text: blogPost003Text,
     date: "2025-08-07",
     tags: ["cleancode", "React", "Javascript"],

@@ -1,5 +1,6 @@
 "use client";
 import BlogPostCard from "./BlogPostCard";
+// import FeaturedPosts from "./FeaturedPosts";
 import { BlogPosts } from "@/data/blogPosts";
 import { motion } from "framer-motion";
 
