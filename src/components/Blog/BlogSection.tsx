@@ -1,6 +1,6 @@
 "use client";
 import BlogPostCard from "./BlogPostCard";
-// import FeaturedPosts from "./FeaturedPosts";
+import FeaturedPosts from "./FeaturedPosts";
 import { BlogPosts } from "@/data/blogPosts";
 import { motion } from "framer-motion";
 
@@ -16,6 +16,7 @@ const BlogSection = () => {
       >
         Latest Blog Posts
       </motion.h2>
+      <FeaturedPosts />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {BlogPosts.map((post) => (
           <BlogPostCard key={post.id} post={post} />
