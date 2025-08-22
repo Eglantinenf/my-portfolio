@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Mail, Github, Linkedin, Send } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -33,7 +34,26 @@ const navLinks = [
   { name: "Blog", href: "#blog" },
 ];
 
+type Star = {
+  size: number;
+  top: string;
+  left: string;
+  animationDuration: string;
+};
+
 export default function Footer() {
+  const [stars, setStars] = useState<Star[]>([]);
+
+  useEffect(() => {
+    const generatedStars: Star[] = Array.from({ length: 20 }).map(() => ({
+      size: Math.random() * 5 + 2,
+      top: `${Math.random() * 90}%`,
+      left: `${Math.random() * 90}%`,
+      animationDuration: `${Math.random() * 5 + 3}s`,
+    }));
+    setStars(generatedStars);
+  }, []);
+
   return (
     <footer
       id="contact"
@@ -41,17 +61,17 @@ export default function Footer() {
     >
       {/* With AI help :))) i love the result */}
       <div className="absolute inset-0 pointer-events-none">
-        {[...Array(20)].map((_, i) => (
+        {stars.map((star, index) => (
           <div
-            key={i}
-            className={`absolute bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 rounded-full opacity-30 animate-pulse`}
+            key={index}
             style={{
-              width: `${Math.random() * 6 + 2}px`,
-              height: `${Math.random() * 6 + 2}px`,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDuration: `${Math.random() * 4 + 3}s`,
+              width: `${star.size}px`,
+              height: `${star.size}px`,
+              top: star.top,
+              left: star.left,
+              animationDuration: star.animationDuration,
             }}
+            className="absolute bg-gradient-to-r from-purple-400 via-pink-400 rounded-full animate-pulse"
           />
         ))}
       </div>
