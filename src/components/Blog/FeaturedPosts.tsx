@@ -5,7 +5,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { BlogPosts } from "@/data/blogPosts";
-import Image from "next/image";
 
 const FeaturedPosts: React.FC = () => {
   const featuredPosts = BlogPosts.slice(0, 3);
@@ -22,17 +21,8 @@ const FeaturedPosts: React.FC = () => {
         loop
       >
         {featuredPosts.map((post) => (
-          <SwiperSlide key={post.id}>
+          <SwiperSlide key={post.id} className="flex px-4 sm:px-10 lg:px-12">
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col h-full">
-              <div className="relative aspect-video">
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  fill
-                  className="object-cover"
-                  loading="lazy"
-                />
-              </div>
               <div className="p-5 flex flex-col flex-grow">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">
                   {post.title}
