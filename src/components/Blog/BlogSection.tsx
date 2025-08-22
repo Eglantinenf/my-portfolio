@@ -26,7 +26,7 @@ const BlogSection = () => {
       : BlogPosts.filter((post) => post.tags.includes(selectedFilter));
 
   return (
-    <section id="blog" className="section-bg px-4 sm:px-6 lg:px-8 py-20">
+    <section id="blog" className="section-bg px-4 sm:px-8 md:px-16 py-20">
       <motion.h2
         className="text-3xl text-center font-extrabold text-purple-700 dark:text-purple-300 mb-8"
         initial={{ opacity: 0, y: 20 }}

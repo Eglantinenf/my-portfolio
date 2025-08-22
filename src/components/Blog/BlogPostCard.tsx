@@ -21,10 +21,20 @@ const BlogPostCard: React.FC<{ post: BlogPost }> = ({ post }) => {
   return (
     <motion.article
       className="flex flex-col h-full bg-white dark:bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl border border-white/20 dark:border-gray-700/40 overflow-hidden"
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
       viewport={{ once: true }}
+      whileHover={{
+        scale: 1.03,
+        y: -6,
+        boxShadow: "0 12px 28px rgba(0, 0, 0, 0.12)",
+      }}
+      transition={{
+        duration: 0.18,
+        ease: [0.4, 0, 0.2, 1],
+      }}
+      role="group"
+      aria-label={`Blog title: ${post.title}`}
     >
       <a
         href={`/blog/${post.slug}`}
