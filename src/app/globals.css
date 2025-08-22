@@ -59,3 +59,15 @@ body {
 .animate-spin-slow {
   animation: spin-slow 8s linear infinite;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-purple-600 dark:text-purple-400 !important;
+  @apply hover:scale-110 transition-transform duration-200;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 2rem !important;
+  font-weight: bold;
+}
