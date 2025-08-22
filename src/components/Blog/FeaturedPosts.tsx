@@ -9,7 +9,7 @@ import { BlogPosts } from "@/data/blogPosts";
 const FeaturedPosts: React.FC = () => {
   const featuredPosts = BlogPosts.slice(0, 3);
   return (
-    <div className="max-w-4xl mx-auto relative">
+    <div className="max-w-4xl mx-auto relative mb-12">
       <Swiper
         className="pb-12"
         modules={[Navigation, Pagination, Autoplay]}
