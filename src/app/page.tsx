@@ -4,6 +4,7 @@ import AboutSection from "@/components/About/AboutSection";
 import ProjectsSection from "@/components/Projects/ProjectsSection";
 import BlogSection from "@/components/Blog/BlogSection";
 import BackToTopButton from "@/components/ui/BackToTopButton";
+import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
@@ -13,6 +14,7 @@ export default function Home() {
       <ProjectsSection />
       <BlogSection />
       <BackToTopButton />
+      <Footer />
     </main>
   );
 }
