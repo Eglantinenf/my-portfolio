@@ -1,0 +1,65 @@
+{
+  "title": "My Projects",
+  "projects": [
+    {
+      "title": "Portfolio Website",
+      "description": "A personal portfolio website built with React.js, Next.js, and Tailwind CSS to showcase my projects and skills."
+    },
+    {
+      "title": "Mental Health",
+      "description": "A project dedicated to promoting mental health and providing motivational resources for support and encouragement."
+    },
+    {
+      "title": "ToDo App",
+      "description": "A simple and intuitive ToDo application with filtering, persistence, and responsive UI."
+    },
+    {
+      "title": "Weather App",
+      "description": "An interactive React project using live API data to show weather updates."
+    },
+    {
+      "title": "Course Tracker",
+      "description": "A personal project to help track and monitor remaining time for courses."
+    },
+    {
+      "title": "Library Management API",
+      "description": "A backend project with features like user registration, book management, borrowing, validation, and late fee handling."
+    },
+    {
+      "title": "Login using Firebase",
+      "description": "A project for posting user information such as name and password to Firebase."
+    },
+    {
+      "title": "Survey Form",
+      "description": "A required project for earning Responsive Web Design Certification on freeCodeCamp."
+    },
+    {
+      "title": "Tribute Page",
+      "description": "A required project for earning Responsive Web Design Certification on freeCodeCamp."
+    },
+    {
+      "title": "Healthy Food Restaurant",
+      "description": "A stylish website for a healthy food restaurant, developed from a Figma template to practice CSS and frontend development."
+    },
+    {
+      "title": "Pet Store",
+      "description": "A simple practice project from a Figma template, built with HTML & CSS."
+    },
+    {
+      "title": "Text Generator",
+      "description": "A simple text generator to save time for large projects."
+    },
+    {
+      "title": "Simple Calculator",
+      "description": "One of my first practice projects, a basic calculator built with HTML and CSS."
+    },
+    {
+      "title": "Simple Login Form",
+      "description": "One of my first practice projects, a basic login form built with HTML and CSS."
+    }
+  ],
+  "buttons": {
+    "github": "GitHub",
+    "liveDemo": "Live Demo"
+  }
+}
