@@ -1,4 +1,21 @@
 {
+  "slider": [
+    {
+      "title": "My Journey to Finding My Love for Coding",
+      "summary": "a story about how an HTML course change my whole carrer path",
+      "date": "2025-08-15"
+    },
+    {
+      "title": "React.js learning story",
+      "summary": "I learned React through real projects and practice, and my love for it never let me switch frameworks.",
+      "date": "2025-08-07"
+    },
+    {
+      "title": "How i started to learn Typescripts",
+      "summary": "Why TypeScript changed my coding style and productivity...",
+      "date": "2025-08-09"
+    }
+  ],
   "blog": [
     {
       "title": "My Journey to Finding My Love for Coding",

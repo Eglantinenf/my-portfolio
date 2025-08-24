@@ -4,8 +4,6 @@ import React, { useEffect, useState, useRef } from "react";
 import { Sun, Moon } from "lucide-react";
 import Image from "next/image";
 import { useTheme } from "@/context/ThemeContext";
-// import { useTranslation } from "react-i18next";
-// import LanguageSwitcher from "./LanguageSwitcher";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -120,9 +118,6 @@ const Navbar: React.FC = () => {
               </a>
             </li>
           ))}
-          {/* <li>
-            <LanguageSwitcher />
-          </li> */}
 
           {/* Dark Mode Toggle */}
           <li>
